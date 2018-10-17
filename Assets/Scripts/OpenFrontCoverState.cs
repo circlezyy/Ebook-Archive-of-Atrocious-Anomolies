@@ -17,7 +17,7 @@ public class OpenFrontCoverState : IState
     {
         ai.fc.rotateToYRotation(179.9f, 1);
         ai.p1.rotateToYRotation(11.0f, 1);
-        ai.p1.blendCurlDown(65, 150.0f);
+        ai.p1.blendCurlDown(65, 1);
     }
 
     public void ExitState(GameObject owner)

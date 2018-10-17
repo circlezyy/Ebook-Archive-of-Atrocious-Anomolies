@@ -58,102 +58,55 @@ public class Page : MonoBehaviour
         changes--;
     }
 
-    public void blendCurlDown(float newCurlDown, float curlRate)
+    public void blendCurlDown(float newCurlDown, float timeToMove)
     {
         changes++;
-        StartCoroutine(BlendCurlDownI(newCurlDown, curlRate));
+        StartCoroutine(BlendCurlDownI(newCurlDown, timeToMove));
     }
 
-    public void blendCurlUp(float newCurlUp, float curlRate)
+    public void blendCurlUp(float newCurlUp, float timeToMove)
     {
         changes++;
-        StartCoroutine(BlendCurlUpI(newCurlUp, curlRate));
+        StartCoroutine(BlendCurlUpI(newCurlUp, timeToMove));
     }
 
-    IEnumerator BlendCurlUpI(float newCurlUp, float curlRate)
+    IEnumerator BlendCurlUpI(float newCurlUp, float timeToMove)
     {
         SkinnedMeshRenderer smr = transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
         float currCurlUp = smr.GetBlendShapeWeight(1);
+        float temp;
 
-        if (currCurlUp < newCurlUp)
+        var t = 0f;
+        while (t < 1)
         {
-            while (currCurlUp < newCurlUp)
-            {
-                currCurlUp += curlRate * Time.deltaTime;
-
-                if (currCurlUp >= newCurlUp)
-                    break;
-
-                smr.SetBlendShapeWeight(1, currCurlUp);
-
-                yield return null;
-            }
+            t += Time.deltaTime / timeToMove;
+            temp = Mathf.Lerp(currCurlUp, newCurlUp, t);
+            smr.SetBlendShapeWeight(1, temp);
+            yield return null;
         }
-        else
-        {
-            while (currCurlUp > newCurlUp)
-            {
-                currCurlUp -= curlRate * Time.deltaTime;
-
-                if (currCurlUp <= newCurlUp)
-                    break;
-
-                smr.SetBlendShapeWeight(1, currCurlUp);
-
-                yield return null;
-            }
-
-        }
-
-
-        smr.SetBlendShapeWeight(1, newCurlUp);
         changes--;
     }
 
-    IEnumerator BlendCurlDownI(float newCurlDown, float curlRate)
+    IEnumerator BlendCurlDownI(float newCurlDown, float timeToMove)
     {
         SkinnedMeshRenderer smr = transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
         float currCurlDown = smr.GetBlendShapeWeight(0);
+        float temp;
 
-        if (currCurlDown < newCurlDown)
+        var t = 0f;
+        while (t < 1)
         {
-            while (currCurlDown < newCurlDown)
-            {
-                currCurlDown += curlRate * Time.deltaTime;
-
-                if (currCurlDown >= newCurlDown)
-                    break;
-
-                smr.SetBlendShapeWeight(0, currCurlDown);
-
-                yield return null;
-            }
+            t += Time.deltaTime / timeToMove;
+            temp = Mathf.Lerp(currCurlDown, newCurlDown, t);
+            smr.SetBlendShapeWeight(0, temp);
+            yield return null;
         }
-        else
-        {
-            while (currCurlDown > newCurlDown)
-            {
-                currCurlDown -= curlRate * Time.deltaTime;
-
-                if (currCurlDown <= newCurlDown)
-                    break;
-
-                smr.SetBlendShapeWeight(0, currCurlDown);
-
-                yield return null;
-            }
-
-        }
-
-
-        smr.SetBlendShapeWeight(0, newCurlDown);
         changes--;
     }
 
     public void rotateToYRotation(float newYRot, float timeToMove)
     {
         changes++;
-
         StartCoroutine(RotateToYRotationI(newYRot, timeToMove));
     }
 
