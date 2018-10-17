@@ -37,51 +37,98 @@ public class BookAI : MonoBehaviour
 
     public void TurnForward()
     {
+        ui.ClearInput();
 
+        if (currPage == p.Length - 1)
+            return;
 
         if (currPage == 0)
         {
             p[0].rotateToYRotation(180f, 1);
+
             p[1].rotateToYRotation(11.0f, 1);
             p[1].blendCurlDown(65, 1);
-            currPage++;
         }
-        else if (currPage == 1)
+        else
         {
-            p[0].moveZPosition(0.2f, 1);
+            for (int i = 0; i < currPage; i++)
+            {
+                p[i].moveZPosition(0.2f, 1);
+            }
 
-            p[1].rotateToYRotation(169f, 1);
-            p[1].blendCurlDown(0, 1);
-            p[1].blendCurlUp(65, 1);
+            p[currPage].FlipLeft();
 
-            p[2].rotateToYRotation(11.0f, 1);
-            p[2].blendCurlDown(65, 1);
-            currPage++;
+            p[currPage + 1].rotateToYRotation(11.0f, 1);
+            p[currPage + 1].blendCurlDown(65, 1);
         }
-        ui.ClearInput();
+
+        currPage++;
     }
 
     public void TurnBack()
     {
-        if (currPage == 2)
-        {
-            p[0].moveZPosition(-0.2f, 1);
+        ui.ClearInput();
 
-            p[1].rotateToYRotation(11, 1);
-            p[1].blendCurlDown(65, 1);
-            p[1].blendCurlUp(0, 1);
+        if (currPage == 0)
+            return;
 
-            p[2].rotateToYRotation(0.0f, 1);
-            p[2].blendCurlDown(0, 1);
-            currPage--;
-        }
-        else if (currPage == 1)
+        if (currPage == 1)
         {
             p[0].rotateToYRotation(0.0f, 1);
             p[1].rotateToYRotation(0.0f, 1);
             p[1].blendCurlDown(0, 1);
-            currPage--;
         }
-        ui.ClearInput();
+        else
+        {
+            for (int i = 0; i < currPage - 1; i++)
+            {
+                p[i].moveZPosition(-0.2f, 1);
+            }
+
+            p[currPage - 1].FlipRight();
+
+            p[currPage].rotateToYRotation(0, 1);
+            p[currPage].blendCurlDown(0, 1);
+        }
+        //case 4:
+        //    p[0].moveZPosition(-0.2f, 1);
+        //    p[1].moveZPosition(-0.2f, 1);
+        //    p[2].moveZPosition(-0.2f, 1);
+
+        //    p[3].FlipRight();
+
+        //    p[4].rotateToYRotation(0, 1);
+        //    p[4].blendCurlDown(0, 1);
+
+        //    break;
+        //case 3:
+        //    p[0].moveZPosition(-0.2f, 1);
+        //    p[1].moveZPosition(-0.2f, 1);
+
+        //    p[2].FlipRight();
+
+        //    p[3].rotateToYRotation(0, 1);
+        //    p[3].blendCurlDown(0, 1);
+
+        //    break;
+        //case 2:
+        //    p[0].moveZPosition(-0.2f, 1);
+
+        //    p[1].FlipRight();
+
+        //    p[2].rotateToYRotation(0.0f, 1);
+        //    p[2].blendCurlDown(0, 1);
+
+        //    break;
+        //case 1:
+        //p[0].rotateToYRotation(0.0f, 1);
+        //p[1].rotateToYRotation(0.0f, 1);
+        //p[1].blendCurlDown(0, 1);
+
+        //break;
+        //    default:
+        //        break;
+        //}
+        currPage--;
     }
 }

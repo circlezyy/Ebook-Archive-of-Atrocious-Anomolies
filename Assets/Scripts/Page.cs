@@ -6,6 +6,20 @@ public class Page : MonoBehaviour
 {
     public int changes = 0;
 
+    public void FlipLeft()
+    {
+        rotateToYRotation(169f, 1);
+        blendCurlDown(0, 1);
+        blendCurlUp(65, 1);
+    }
+
+    public void FlipRight()
+    {
+        rotateToYRotation(11f, 1);
+        blendCurlDown(65, 1);
+        blendCurlUp(0, 1);
+    }
+
     public void setPosition(Vector3 newPos)
     {
         transform.position = newPos;

@@ -26,12 +26,10 @@ public class NotTurningState : IState
     {
         if (ai.ui.turnLeft)
         {
-            Debug.Log("Pressed Left");
             stateMachine.ChangeState(stateMachine.backState);
         }
         else if (ai.ui.turnRight)
         {
-            Debug.Log("Pressed Right");
             stateMachine.ChangeState(stateMachine.forwardState);
         }
     }
