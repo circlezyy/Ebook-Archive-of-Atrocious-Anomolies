@@ -38,6 +38,7 @@ public class Page : MonoBehaviour
 
     public void moveZPosition(float zChange, float timeToMove)
     {
+        changes++;
         StartCoroutine(moveZPositionI(zChange, timeToMove));
     }
 
@@ -54,6 +55,7 @@ public class Page : MonoBehaviour
             transform.position = Vector3.Lerp(currentPos, targetPos, t);
             yield return null;
         }
+        changes--;
     }
 
     public void blendCurlDown(float newCurlDown, float curlRate)
@@ -148,57 +150,27 @@ public class Page : MonoBehaviour
         changes--;
     }
 
-    public void rotateToYRotation(float newYRot, float rotateRate)
+    public void rotateToYRotation(float newYRot, float timeToMove)
     {
         changes++;
 
-        if (newYRot > transform.localRotation.eulerAngles.y)
-            StartCoroutine(RotateToHigherYRotationI(newYRot, rotateRate));
-        else
-        {
-            StartCoroutine(RotateToLowerYRotationI(newYRot, rotateRate));
-        }
-
+        StartCoroutine(RotateToYRotationI(newYRot, timeToMove));
     }
 
-    IEnumerator RotateToLowerYRotationI(float newYRot, float rotateRate)
+    IEnumerator RotateToYRotationI(float newYRot, float timeToMove)
     {
-        float currRotation = transform.localRotation.eulerAngles.y;
-
-        Debug.Log(currRotation + ", " + newYRot);
-
-        while (currRotation > newYRot)
+        Vector3 currRotation = transform.localRotation.eulerAngles;
+        Vector3 targetRotation = Quaternion.Euler(currRotation.x, newYRot, currRotation.z).eulerAngles;
+        Vector3 temp;
+        
+        var t = 0f;
+        while (t < 1)
         {
-            currRotation -= rotateRate * Time.deltaTime;
-
-            if (currRotation <= newYRot)
-                break;
-
-            transform.rotation = Quaternion.Euler(transform.rotation.x,
-                                                  currRotation,
-                                                  transform.rotation.z);
+            t += Time.deltaTime / timeToMove;
+            temp = Vector3.Lerp(currRotation, targetRotation, t);
+            transform.rotation = Quaternion.Euler(temp.x, temp.y, temp.z);
             yield return null;
         }
-        transform.rotation = Quaternion.Euler(0, newYRot, 0);
-        changes--;
-    }
-
-    IEnumerator RotateToHigherYRotationI(float newYRot, float rotateRate)
-    {
-        float currRotation = transform.localRotation.eulerAngles.y;
-
-        while (currRotation < newYRot)
-        {
-            currRotation += rotateRate * Time.deltaTime;
-            if (currRotation >= newYRot)
-                break;
-
-            transform.rotation = Quaternion.Euler(transform.rotation.x,
-                                                  currRotation,
-                                                  transform.rotation.z);
-            yield return null;
-        }
-        transform.rotation = Quaternion.Euler(0, newYRot, 0);
         changes--;
     }
 }

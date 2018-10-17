@@ -17,11 +17,11 @@ public class OpenPage1State : IState
     {
         ai.fc.moveZPosition(0.2f, 1);
 
-        ai.p1.rotateToYRotation(169f, 150.0f);
+        ai.p1.rotateToYRotation(169f, 1);
         ai.p1.blendCurlDown(0, 150.0f);
         ai.p1.blendCurlUp(65, 150.0f);
 
-        ai.p2.rotateToYRotation(11.0f, 100.0f);
+        ai.p2.rotateToYRotation(11.0f, 1);
         ai.p2.blendCurlDown(65, 150.0f);
     }
 

@@ -15,8 +15,8 @@ public class CloseFrontCoverState : IState
 
     public void EnterState(GameObject owner)
     {
-        ai.fc.rotateToYRotation(0.0f, 150.0f);
-        ai.p1.rotateToYRotation(0.0f, 20.0f);
+        ai.fc.rotateToYRotation(0.0f, 1);
+        ai.p1.rotateToYRotation(0.0f, 1);
         ai.p1.blendCurlDown(0, 150.0f);
     }
 
