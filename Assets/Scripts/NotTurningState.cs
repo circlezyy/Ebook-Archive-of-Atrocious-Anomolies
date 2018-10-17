@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Page2UpState : IState
+public class NotTurningState : IState
 {
     private readonly BookStateMachine stateMachine;
     private readonly BookAI ai;
 
-    public Page2UpState(BookStateMachine sm)
+    public NotTurningState(BookStateMachine sm)
     {
         stateMachine = sm;
         ai = sm.Owner.GetComponent<BookAI>();
@@ -15,7 +15,7 @@ public class Page2UpState : IState
 
     public void EnterState(GameObject owner)
     {
-        ai.ui.ClearInput();
+
     }
 
     public void ExitState(GameObject owner)
@@ -24,13 +24,15 @@ public class Page2UpState : IState
 
     public void UpdateState(GameObject owner)
     {
-        if (ai.ui.turnRight)
+        if (ai.ui.turnLeft)
         {
-            stateMachine.ChangeState(stateMachine.closePage1State);
+            Debug.Log("Pressed Left");
+            stateMachine.ChangeState(stateMachine.backState);
         }
-        else if (ai.ui.turnLeft)
+        else if (ai.ui.turnRight)
         {
-            //stateMachine.ChangeState(stateMachine.closePage1State);
+            Debug.Log("Pressed Right");
+            stateMachine.ChangeState(stateMachine.forwardState);
         }
     }
 }

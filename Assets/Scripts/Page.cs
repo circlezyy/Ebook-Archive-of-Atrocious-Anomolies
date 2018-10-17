@@ -2,11 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CurlDirection
-{
-    Up, Down
-}
-
 public class Page : MonoBehaviour
 {
     public int changes = 0;

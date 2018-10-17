@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClosePage1State : IState
+public class ForwardState : IState
 {
     private readonly BookStateMachine stateMachine;
     private readonly BookAI ai;
 
-    public ClosePage1State(BookStateMachine sm)
+    public ForwardState(BookStateMachine sm)
     {
         stateMachine = sm;
         ai = sm.Owner.GetComponent<BookAI>();
@@ -15,14 +15,8 @@ public class ClosePage1State : IState
 
     public void EnterState(GameObject owner)
     {
-        ai.fc.moveZPosition(-0.2f, 1);
-
-        ai.p1.rotateToYRotation(11, 1);
-        ai.p1.blendCurlDown(65, 1);
-        ai.p1.blendCurlUp(0, 1);
-
-        ai.p2.rotateToYRotation(0.0f, 1);
-        ai.p2.blendCurlDown(0, 1);
+        ai.TurnForward();
+        stateMachine.ChangeState(stateMachine.notTurningState);
     }
 
     public void ExitState(GameObject owner)
@@ -31,8 +25,5 @@ public class ClosePage1State : IState
 
     public void UpdateState(GameObject owner)
     {
-        if (ai.p1.changes == 0)
-            stateMachine.ChangeState(stateMachine.page1UpState);
     }
 }
-
