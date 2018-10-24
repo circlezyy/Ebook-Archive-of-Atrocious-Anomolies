@@ -26,16 +26,15 @@ public class BookAI : MonoBehaviour
     public void TurnForward()
     {
         ui.ClearInput();
-
         if (currPage == p.Length)
             return;
 
         if (currPage == 0)
         {
-            p[0].rotateToYRotation(180f, 1);
+            p[currPage].rotateToYRotation(180f, 1);
 
-            p[1].rotateToYRotation(11.0f, 1);
-            p[1].blendCurlDown(65, 1);
+            p[currPage + 1].rotateToYRotation(11.0f, 1);
+            p[currPage + 1].blendCurlDown(65, 1);
         }
         else if (currPage == p.Length - 2)
         {
@@ -46,9 +45,14 @@ public class BookAI : MonoBehaviour
 
             //flatten out page now hidden page
             p[currPage - 1].rotateToYRotation(180f, 1);
-            p[currPage - 1].blendCurlUp(0, 1);
+            p[currPage - 1].spineCurlUp(0, 1);
 
+            //flip over page
             p[currPage].FlipLeft();
+
+            //curl corner of page
+            p[currPage].pageCurlUp(100, 0.3f);
+            p[currPage].pageCurlUp(0.7f, 0, 0.3f);
         }
         else if (currPage == p.Length - 1)
         {
@@ -60,13 +64,14 @@ public class BookAI : MonoBehaviour
 
             //flatten out page now hidden page
             p[currPage - 1].rotateToYRotation(180f, 1);
-            p[currPage - 1].blendCurlUp(0, 1);
+            p[currPage - 1].spineCurlUp(0, 1);
 
             //flips over backcover
             p[currPage].rotateToYRotation(180f, 1);
         }
         else
         {
+
             //lower all left side pages
             for (int i = 0; i < currPage; i++)
             {
@@ -75,10 +80,13 @@ public class BookAI : MonoBehaviour
 
             //flatten out page now hidden page
             p[currPage - 1].rotateToYRotation(180f, 1);
-            p[currPage - 1].blendCurlUp(0, 1);
+            p[currPage - 1].spineCurlUp(0, 1);
 
             //flip over page
             p[currPage].FlipLeft();
+            //curl corner of page
+            p[currPage].pageCurlUp(100, 0.3f);
+            p[currPage].pageCurlUp(0.7f, 0, 0.3f);
 
             //raise up newly revealed page
             p[currPage + 1].rotateToYRotation(11.0f, 1);
@@ -111,6 +119,10 @@ public class BookAI : MonoBehaviour
 
             p[currPage - 1].FlipRight();
 
+            //curl corner of page
+            p[currPage - 1].pageCurlDown(100, 0.3f);
+            p[currPage - 1].pageCurlDown(0.7f, 0, 0.3f);
+
             p[currPage].rotateToYRotation(0, 1);
             p[currPage].blendCurlDown(0, 1);
         }
@@ -124,7 +136,7 @@ public class BookAI : MonoBehaviour
             p[currPage - 1].rotateToYRotation(0, 1);
 
             p[currPage - 2].rotateToYRotation(169, 1);
-            p[currPage - 2].blendCurlUp(65, 1);
+            p[currPage - 2].spineCurlUp(65, 1);
         }
         else
         {
@@ -134,9 +146,13 @@ public class BookAI : MonoBehaviour
             }
 
             p[currPage - 2].rotateToYRotation(169, 1);
-            p[currPage - 2].blendCurlUp(65, 1);
+            p[currPage - 2].spineCurlUp(65, 1);
 
             p[currPage - 1].FlipRight();
+
+            //curl corner of page
+            p[currPage - 1].pageCurlDown(100, 0.3f);
+            p[currPage - 1].pageCurlDown(0.7f, 0, 0.3f);
 
             p[currPage].rotateToYRotation(0, 1);
             p[currPage].blendCurlDown(0, 1);

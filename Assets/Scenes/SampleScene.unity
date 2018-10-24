@@ -539,17 +539,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1934501340}
-  fc: {fileID: 1711048826}
-  p1: {fileID: 1783103122}
-  p2: {fileID: 414514991}
-  p3: {fileID: 1172426638}
-  p4: {fileID: 759505413}
-  p5: {fileID: 84377855}
-  p6: {fileID: 1206120554}
-  p7: {fileID: 332010755}
-  p8: {fileID: 957195775}
-  p9: {fileID: 1118336611}
-  bc: {fileID: 48911735}
+  p:
+  - {fileID: 1711048826}
+  - {fileID: 1783103122}
+  - {fileID: 414514991}
+  - {fileID: 1172426638}
+  - {fileID: 759505413}
+  - {fileID: 84377855}
+  - {fileID: 1206120554}
+  - {fileID: 332010755}
+  - {fileID: 957195775}
+  - {fileID: 1118336611}
+  - {fileID: 48911735}
+  currPage: 0
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,7 +2126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 65
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[2]
@@ -2365,7 +2367,7 @@ Prefab:
     - target: {fileID: 328663496168770844, guid: 20a2b712d4f744678854c49765b10e9b,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 328663496168770844, guid: 20a2b712d4f744678854c49765b10e9b,
         type: 2}
@@ -3683,14 +3685,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1711048824}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1126709073}
   m_Father: {fileID: 130640432}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1711048826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3795,14 +3797,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1783103120}
-  m_LocalRotation: {x: 0, y: 0.095845714, z: 0, w: 0.99539626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 976083483}
   m_Father: {fileID: 130640432}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 11, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1783103122
 MonoBehaviour:
   m_ObjectHideFlags: 0

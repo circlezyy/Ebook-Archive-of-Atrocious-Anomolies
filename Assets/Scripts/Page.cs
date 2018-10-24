@@ -10,14 +10,14 @@ public class Page : MonoBehaviour
     {
         rotateToYRotation(169f, 1);
         blendCurlDown(0, 1);
-        blendCurlUp(65, 1);
+        spineCurlUp(65, 1);
     }
 
     public void FlipRight()
     {
         rotateToYRotation(11f, 1);
         blendCurlDown(65, 1);
-        blendCurlUp(0, 1);
+        spineCurlUp(0, 1);
     }
 
     public void setPosition(Vector3 newPos)
@@ -51,7 +51,7 @@ public class Page : MonoBehaviour
         StartCoroutine(moveZPositionI(zChange, timeToMove));
     }
 
-    public IEnumerator moveZPositionI(float zChange, float timeToMove)
+    IEnumerator moveZPositionI(float zChange, float timeToMove)
     {
         var currentPos = transform.position;
         var targetPos = new Vector3(transform.position.x,
@@ -67,19 +67,109 @@ public class Page : MonoBehaviour
         changes--;
     }
 
-    public void blendCurlDown(float newCurlDown, float timeToMove)
+    public void pageCurlDown(float newCurlDown, float timeToMove)
     {
         changes++;
-        StartCoroutine(BlendCurlDownI(newCurlDown, timeToMove));
+        StartCoroutine(PageCurlDownI(newCurlDown, timeToMove));
     }
 
-    public void blendCurlUp(float newCurlUp, float timeToMove)
+    public void pageCurlDown(float timeToWait, float newCurlDown, float timeToMove)
     {
         changes++;
-        StartCoroutine(BlendCurlUpI(newCurlUp, timeToMove));
+        StartCoroutine(PageCurlDownI(timeToWait, newCurlDown, timeToMove));
     }
 
-    IEnumerator BlendCurlUpI(float newCurlUp, float timeToMove)
+    IEnumerator PageCurlDownI(float newCurlDown, float timeToMove)
+    {
+        SkinnedMeshRenderer smr = transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
+        float currCurlDown = smr.GetBlendShapeWeight(3);
+        float temp;
+
+        var t = 0f;
+        while (t < 1)
+        {
+            t += Time.deltaTime / timeToMove;
+            temp = Mathf.Lerp(currCurlDown, newCurlDown, t);
+            smr.SetBlendShapeWeight(3, temp);
+            yield return null;
+        }
+        changes--;
+    }
+
+    IEnumerator PageCurlDownI(float timeToWait, float newCurlDown, float timeToMove)
+    {
+        yield return new WaitForSeconds(timeToWait);
+
+        SkinnedMeshRenderer smr = transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
+        float currCurlDown = smr.GetBlendShapeWeight(3);
+        float temp;
+
+        var t = 0f;
+        while (t < 1)
+        {
+            t += Time.deltaTime / timeToMove;
+            temp = Mathf.Lerp(currCurlDown, newCurlDown, t);
+            smr.SetBlendShapeWeight(3, temp);
+            yield return null;
+        }
+        changes--;
+    }
+
+    public void pageCurlUp(float newCurlUp, float timeToMove)
+    {
+        changes++;
+        StartCoroutine(PageCurlUpI(newCurlUp, timeToMove));
+    }
+
+    public void pageCurlUp(float timeToWait, float newCurlUp, float timeToMove)
+    {
+        changes++;
+        StartCoroutine(PageCurlUpI(timeToWait, newCurlUp, timeToMove));
+    }
+
+    IEnumerator PageCurlUpI(float timeToWait, float newCurlUp, float timeToMove)
+    {
+        yield return new WaitForSeconds(timeToWait);
+
+        SkinnedMeshRenderer smr = transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
+        float currCurlUp = smr.GetBlendShapeWeight(2);
+        float temp;
+
+        var t = 0f;
+        while (t < 1)
+        {
+            t += Time.deltaTime / timeToMove;
+            temp = Mathf.Lerp(currCurlUp, newCurlUp, t);
+            smr.SetBlendShapeWeight(2, temp);
+            yield return null;
+        }
+        changes--;
+    }
+
+    IEnumerator PageCurlUpI(float newCurlUp, float timeToMove)
+    {
+        SkinnedMeshRenderer smr = transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
+        float currCurlUp = smr.GetBlendShapeWeight(2);
+        float temp;
+
+        var t = 0f;
+        while (t < 1)
+        {
+            t += Time.deltaTime / timeToMove;
+            temp = Mathf.Lerp(currCurlUp, newCurlUp, t);
+            smr.SetBlendShapeWeight(2, temp);
+            yield return null;
+        }
+        changes--;
+    }
+
+    public void spineCurlUp(float newCurlUp, float timeToMove)
+    {
+        changes++;
+        StartCoroutine(SpineCurlUpI(newCurlUp, timeToMove));
+    }
+
+    IEnumerator SpineCurlUpI(float newCurlUp, float timeToMove)
     {
         SkinnedMeshRenderer smr = transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
         float currCurlUp = smr.GetBlendShapeWeight(1);
@@ -94,6 +184,12 @@ public class Page : MonoBehaviour
             yield return null;
         }
         changes--;
+    }
+
+    public void blendCurlDown(float newCurlDown, float timeToMove)
+    {
+        changes++;
+        StartCoroutine(BlendCurlDownI(newCurlDown, timeToMove));
     }
 
     IEnumerator BlendCurlDownI(float newCurlDown, float timeToMove)
@@ -135,4 +231,6 @@ public class Page : MonoBehaviour
         }
         changes--;
     }
+
+
 }
