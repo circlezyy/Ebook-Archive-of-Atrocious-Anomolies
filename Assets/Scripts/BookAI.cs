@@ -5,12 +5,12 @@ using UnityEngine;
 public class BookAI : MonoBehaviour
 {
     public BookStateMachine StateMachine { get; set; }
-    public UserInput ui;
+    public UserIPadInput ui;
 
     public Page[] p;
 
+    public int changes = 0;
     public int currPage = 0;
-
 
     private void Start()
     {

@@ -16,7 +16,6 @@ public class ForwardState : IState
     public void EnterState(GameObject owner)
     {
         ai.TurnForward();
-        stateMachine.ChangeState(stateMachine.notTurningState);
     }
 
     public void ExitState(GameObject owner)
@@ -25,5 +24,10 @@ public class ForwardState : IState
 
     public void UpdateState(GameObject owner)
     {
+        if (ai.changes == 0)
+        {
+            ai.ui.ClearInput();
+            stateMachine.ChangeState(stateMachine.notTurningState);
+        }
     }
 }

@@ -7,7 +7,7 @@ public class UserInput : MonoBehaviour
     public bool turnLeft = false;
     public bool turnRight = false;
 
-	void Start ()
+    void Start ()
     {
 		
 	}
@@ -20,14 +20,14 @@ public class UserInput : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("left"))
+        if (Input.GetKey("left"))
         {
             turnLeft = true;
         }
 
-        if (Input.GetKeyDown("right"))
+        if (Input.GetKey("right"))
         {
             turnRight = true;
         }
-	}
+    }
 }

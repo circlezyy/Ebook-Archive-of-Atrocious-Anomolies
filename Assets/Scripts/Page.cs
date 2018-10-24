@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Page : MonoBehaviour
 {
-    public int changes = 0;
+    public BookAI bai;
+
+    public void Start()
+    {
+        bai = transform.GetComponentInParent<BookAI>();
+    }
 
     public void FlipLeft()
     {
@@ -47,7 +52,7 @@ public class Page : MonoBehaviour
 
     public void moveZPosition(float zChange, float timeToMove)
     {
-        changes++;
+        bai.changes++;
         StartCoroutine(moveZPositionI(zChange, timeToMove));
     }
 
@@ -64,18 +69,18 @@ public class Page : MonoBehaviour
             transform.position = Vector3.Lerp(currentPos, targetPos, t);
             yield return null;
         }
-        changes--;
+        bai.changes--;
     }
 
     public void pageCurlDown(float newCurlDown, float timeToMove)
     {
-        changes++;
+        bai.changes++;
         StartCoroutine(PageCurlDownI(newCurlDown, timeToMove));
     }
 
     public void pageCurlDown(float timeToWait, float newCurlDown, float timeToMove)
     {
-        changes++;
+        bai.changes++;
         StartCoroutine(PageCurlDownI(timeToWait, newCurlDown, timeToMove));
     }
 
@@ -93,7 +98,7 @@ public class Page : MonoBehaviour
             smr.SetBlendShapeWeight(3, temp);
             yield return null;
         }
-        changes--;
+        bai.changes--;
     }
 
     IEnumerator PageCurlDownI(float timeToWait, float newCurlDown, float timeToMove)
@@ -112,18 +117,18 @@ public class Page : MonoBehaviour
             smr.SetBlendShapeWeight(3, temp);
             yield return null;
         }
-        changes--;
+        bai.changes--;
     }
 
     public void pageCurlUp(float newCurlUp, float timeToMove)
     {
-        changes++;
+        bai.changes++;
         StartCoroutine(PageCurlUpI(newCurlUp, timeToMove));
     }
 
     public void pageCurlUp(float timeToWait, float newCurlUp, float timeToMove)
     {
-        changes++;
+        bai.changes++;
         StartCoroutine(PageCurlUpI(timeToWait, newCurlUp, timeToMove));
     }
 
@@ -143,7 +148,7 @@ public class Page : MonoBehaviour
             smr.SetBlendShapeWeight(2, temp);
             yield return null;
         }
-        changes--;
+        bai.changes--;
     }
 
     IEnumerator PageCurlUpI(float newCurlUp, float timeToMove)
@@ -160,12 +165,12 @@ public class Page : MonoBehaviour
             smr.SetBlendShapeWeight(2, temp);
             yield return null;
         }
-        changes--;
+        bai.changes--;
     }
 
     public void spineCurlUp(float newCurlUp, float timeToMove)
     {
-        changes++;
+        bai.changes++;
         StartCoroutine(SpineCurlUpI(newCurlUp, timeToMove));
     }
 
@@ -183,12 +188,12 @@ public class Page : MonoBehaviour
             smr.SetBlendShapeWeight(1, temp);
             yield return null;
         }
-        changes--;
+        bai.changes--;
     }
 
     public void blendCurlDown(float newCurlDown, float timeToMove)
     {
-        changes++;
+        bai.changes++;
         StartCoroutine(BlendCurlDownI(newCurlDown, timeToMove));
     }
 
@@ -206,12 +211,12 @@ public class Page : MonoBehaviour
             smr.SetBlendShapeWeight(0, temp);
             yield return null;
         }
-        changes--;
+        bai.changes--;
     }
 
     public void rotateToYRotation(float newYRot, float timeToMove)
     {
-        changes++;
+        bai.changes++;
         StartCoroutine(RotateToYRotationI(newYRot, timeToMove));
     }
 
@@ -229,7 +234,7 @@ public class Page : MonoBehaviour
             transform.rotation = Quaternion.Euler(temp.x, temp.y, temp.z);
             yield return null;
         }
-        changes--;
+        bai.changes--;
     }
 
 
