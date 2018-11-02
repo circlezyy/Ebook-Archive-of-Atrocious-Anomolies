@@ -57,10 +57,10 @@ public class UserIPadInput : MonoBehaviour
         {
             directionChosen = false;
             if (direction.x > 0)
-                turnRight = true;
+                turnLeft = true;
 
             if (direction.x < 0)
-                turnLeft = true;
+                turnRight = true;
         }
     }
 }

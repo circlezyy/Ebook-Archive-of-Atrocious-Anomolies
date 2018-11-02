@@ -11,18 +11,18 @@ public class Page : MonoBehaviour
         bai = transform.GetComponentInParent<BookAI>();
     }
 
-    public void FlipLeft()
+    public void FlipLeft(float rate)
     {
-        rotateToYRotation(169f, 1);
-        blendCurlDown(0, 1);
-        spineCurlUp(65, 1);
+        rotateToYRotation(169f, 1 * rate);
+        blendCurlDown(0, 1 * rate);
+        spineCurlUp(65, 1 * rate);
     }
 
-    public void FlipRight()
+    public void FlipRight(float rate)
     {
-        rotateToYRotation(11f, 1);
-        blendCurlDown(65, 1);
-        spineCurlUp(0, 1);
+        rotateToYRotation(11f, 1 * rate);
+        blendCurlDown(65, 1 * rate);
+        spineCurlUp(0, 1 * rate);
     }
 
     public void setPosition(Vector3 newPos)
