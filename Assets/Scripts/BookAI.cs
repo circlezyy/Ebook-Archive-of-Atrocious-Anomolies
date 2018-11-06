@@ -64,71 +64,36 @@ public class BookAI : MonoBehaviour
     public void TurnForward()
     {
         ui.ClearInput();
+
         if (currPage == p.Length)
             return;
 
         if (currPage == 0)
         {
-            p[currPage].rotateToYRotation(180f, 1 * rate);
-
-            p[currPage + 1].rotateToYRotation(11.0f, 1 * rate);
-            p[currPage + 1].blendCurlDown(65, 1 * rate);
-        }
-        else if (currPage == p.Length - 2)
-        {
-            for (int i = 0; i < currPage; i++)
-            {
-                p[i].moveZPosition(0.2f, 1 * rate);
-            }
-
-            //flatten out page now hidden page
-            p[currPage - 1].rotateToYRotation(180f, 1 * rate);
-            p[currPage - 1].spineCurlUp(0, 1 * rate);
-
-            //flip over page
-            p[currPage].FlipLeft(rate);
-
-            //curl corner of page
-            p[currPage].pageCurlUp(100, 0.3f * rate);
-            p[currPage].pageCurlUp(0.7f * rate, 0, 0.3f * rate);
-        }
-        else if (currPage == p.Length - 1)
-        {
-            //lower all left side pages
-            for (int i = 0; i < currPage; i++)
-            {
-                p[i].moveZPosition(0.2f, 1 * rate);
-            }
-
-            //flatten out page now hidden page
-            p[currPage - 1].rotateToYRotation(180f, 1 * rate);
-            p[currPage - 1].spineCurlUp(0, 1 * rate);
-
-            //flips over backcover
-            p[currPage].rotateToYRotation(180f, 1 * rate);
+            p[currPage].CoverLeft();
+            p[currPage + 1].PageRightRise();
         }
         else
         {
-
-            //lower all left side pages
             for (int i = 0; i < currPage; i++)
+                p[i].moveDown();
+
+            if (currPage == p.Length - 2)
             {
-                p[i].moveZPosition(0.2f, 1 * rate);
+                p[currPage - 1].PageLeftFlatten();
+                p[currPage].PageFlipLeft();
             }
-
-            //flatten out page now hidden page
-            p[currPage - 1].rotateToYRotation(180f, 1 * rate);
-            p[currPage - 1].spineCurlUp(0, 1 * rate);
-
-            //flip over page
-            p[currPage].FlipLeft(rate);
-            //curl corner of page
-            p[currPage].pageCurlUp(100, 0.3f * rate);
-            p[currPage].pageCurlUp(0.7f * rate, 0, 0.3f * rate);
-
-            //raise up newly revealed page
-            p[currPage + 1].rotateToYRotation(11.0f, 1 * rate);
-            p[currPage + 1].blendCurlDown(65, 1 * rate);
+            else if (currPage == p.Length - 1)
+            {
+                p[currPage - 1].PageLeftFlatten();
+                p[currPage].CoverLeft();
+            }
+            else
+            {
+                p[currPage - 1].PageLeftFlatten();
+                p[currPage].PageFlipLeft();
+                p[currPage + 1].PageRightRise();
+            }
         }
 
         currPage++;
@@ -138,62 +103,37 @@ public class BookAI : MonoBehaviour
     {
         ui.ClearInput();
 
+        //At beginning of book, no more pages to turn
         if (currPage == 0)
             return;
 
+
         if (currPage == 1)
         {
-            p[currPage - 1].rotateToYRotation(0.0f, 1 * rate);
-
-            p[currPage].rotateToYRotation(0.0f, 1 * rate);
-            p[currPage].blendCurlDown(0, 1 * rate);
-        }
-        else if (currPage == 2)
-        {
-            for (int i = 0; i < currPage - 1; i++)
-            {
-                p[i].moveZPosition(-0.2f, 1 * rate);
-            }
-
-            p[currPage - 1].FlipRight(rate);
-
-            //curl corner of page
-            p[currPage - 1].pageCurlDown(100, 0.3f * rate);
-            p[currPage - 1].pageCurlDown(0.7f * rate, 0, 0.3f * rate);
-
-            p[currPage].rotateToYRotation(0, 1 * rate);
-            p[currPage].blendCurlDown(0, 1 * rate);
-        }
-        else if (currPage == p.Length)
-        {
-            for (int i = 0; i < currPage - 1; i++)
-            {
-                p[i].moveZPosition(-0.2f, 1 * rate);
-            }
-
-            p[currPage - 1].rotateToYRotation(0, 1 * rate);
-
-            p[currPage - 2].rotateToYRotation(169, 1 * rate);
-            p[currPage - 2].spineCurlUp(65, 1 * rate);
+            p[currPage - 1].CoverRight();
+            p[currPage].PageRightFlatten();
         }
         else
         {
             for (int i = 0; i < currPage - 1; i++)
+                p[i].moveUp();
+
+            if (currPage == 2)
             {
-                p[i].moveZPosition(-0.2f, 1 * rate);
+                p[currPage - 1].PageFlipRight();
+                p[currPage].PageRightFlatten();
             }
-
-            p[currPage - 2].rotateToYRotation(169, 1 * rate);
-            p[currPage - 2].spineCurlUp(65, 1 * rate);
-
-            p[currPage - 1].FlipRight(rate);
-
-            //curl corner of page
-            p[currPage - 1].pageCurlDown(100, 0.3f * rate);
-            p[currPage - 1].pageCurlDown(0.7f * rate, 0, 0.3f * rate);
-
-            p[currPage].rotateToYRotation(0, 1 * rate);
-            p[currPage].blendCurlDown(0, 1 * rate);
+            else if (currPage == p.Length)
+            {
+                p[currPage - 2].PageLeftRise();
+                p[currPage - 1].CoverRight();
+            }
+            else
+            {
+                p[currPage - 2].PageLeftRise();
+                p[currPage - 1].PageFlipRight();
+                p[currPage].PageRightFlatten();
+            }
         }
 
         currPage--;
