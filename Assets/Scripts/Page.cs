@@ -5,10 +5,26 @@ using UnityEngine;
 public class Page : MonoBehaviour
 {
     public BookAI bai;
+    public GameObject CanvasFront;
+    public GameObject CanvasBack;
 
     public void Start()
     {
         bai = transform.GetComponentInParent<BookAI>();
+        CanvasFront = transform.Find("CanvasFront").gameObject;
+        CanvasBack = transform.Find("CanvasBack").gameObject;
+        SetActiveCanvasFront(false);
+        SetActiveCanvasBack(false);
+    }
+
+    public void SetActiveCanvasFront(bool isActive)
+    {
+        CanvasFront.SetActive(isActive);
+    }
+
+    public void SetActiveCanvasBack(bool isActive)
+    {
+        CanvasBack.SetActive(isActive);
     }
 
     public void CoverLeft()
