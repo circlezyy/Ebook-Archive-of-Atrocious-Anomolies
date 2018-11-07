@@ -70,6 +70,9 @@ public class BookAI : MonoBehaviour
 
         if (currPage == 0)
         {
+            p[currPage].SetActiveCanvasBack(true);
+            p[currPage + 1].SetActiveCanvasFront(true);
+
             p[currPage].CoverLeft();
             p[currPage + 1].PageRightRise();
         }
@@ -80,16 +83,31 @@ public class BookAI : MonoBehaviour
 
             if (currPage == p.Length - 2)
             {
+                p[currPage - 1].SetActiveCanvasBack(false);
+                p[currPage].SetActiveCanvasFront(false);
+                p[currPage].SetActiveCanvasBack(true);
+                p[currPage + 1].SetActiveCanvasFront(true);
+
                 p[currPage - 1].PageLeftFlatten();
                 p[currPage].PageFlipLeft();
             }
             else if (currPage == p.Length - 1)
             {
+                p[currPage - 1].SetActiveCanvasBack(false);
+                p[currPage].SetActiveCanvasFront(false);
+                p[currPage].SetActiveCanvasBack(true);
+
                 p[currPage - 1].PageLeftFlatten();
                 p[currPage].CoverLeft();
             }
             else
             {
+                p[currPage - 1].SetActiveCanvasBack(false);
+                p[currPage].SetActiveCanvasFront(false);
+                p[currPage].SetActiveCanvasBack(true);
+                p[currPage + 1].SetActiveCanvasFront(true);
+
+
                 p[currPage - 1].PageLeftFlatten();
                 p[currPage].PageFlipLeft();
                 p[currPage + 1].PageRightRise();
@@ -110,6 +128,9 @@ public class BookAI : MonoBehaviour
 
         if (currPage == 1)
         {
+            p[currPage - 1].SetActiveCanvasBack(false);
+            p[currPage].SetActiveCanvasFront(false);
+
             p[currPage - 1].CoverRight();
             p[currPage].PageRightFlatten();
         }
@@ -120,16 +141,31 @@ public class BookAI : MonoBehaviour
 
             if (currPage == 2)
             {
+                p[currPage - 2].SetActiveCanvasBack(true);
+                p[currPage - 1].SetActiveCanvasFront(true);
+                p[currPage - 1].SetActiveCanvasBack(false);
+                p[currPage].SetActiveCanvasFront(false);
+
                 p[currPage - 1].PageFlipRight();
                 p[currPage].PageRightFlatten();
+                //don't raise up front cover
             }
             else if (currPage == p.Length)
             {
+                p[currPage - 2].SetActiveCanvasBack(true);
+                p[currPage - 1].SetActiveCanvasFront(true);
+                p[currPage - 1].SetActiveCanvasBack(false);
+
                 p[currPage - 2].PageLeftRise();
                 p[currPage - 1].CoverRight();
             }
             else
             {
+                p[currPage - 2].SetActiveCanvasBack(true);
+                p[currPage - 1].SetActiveCanvasFront(true);
+                p[currPage - 1].SetActiveCanvasBack(false);
+                p[currPage].SetActiveCanvasFront(false);
+
                 p[currPage - 2].PageLeftRise();
                 p[currPage - 1].PageFlipRight();
                 p[currPage].PageRightFlatten();

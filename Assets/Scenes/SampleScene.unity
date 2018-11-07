@@ -550,7 +550,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -751,7 +751,7 @@ MonoBehaviour:
   - {fileID: 48911735}
   changes: 0
   currPage: 0
-  rate: 0.1
+  rate: 1
 --- !u!1 &145423110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1157,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1946,7 +1946,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2455,19 +2455,19 @@ Prefab:
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 38b9dec25a8b040feafb530f729afc5e, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 100000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Name
       value: paper7with4Materials
@@ -2656,12 +2656,12 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 05d27066b5252488c8a33237d9c34bff, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 137905067637633278, guid: f18f07c84483b47d1beb6e7a7c9549fb,
         type: 2}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: a808b999041ef4225bbe222b8c1c30e8, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 1342332140710700, guid: f18f07c84483b47d1beb6e7a7c9549fb, type: 2}
       propertyPath: m_Name
       value: paperBackCover2Materials
@@ -2773,19 +2773,19 @@ Prefab:
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 38b9dec25a8b040feafb530f729afc5e, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 100000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Name
       value: paper4with4Materials
@@ -3066,7 +3066,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3103,7 +3103,7 @@ RectTransform:
   m_GameObject: {fileID: 498136051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.2}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2075790461}
   m_Father: {fileID: 349095981}
@@ -3275,19 +3275,19 @@ Prefab:
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 38b9dec25a8b040feafb530f729afc5e, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 100000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Name
       value: paper6with4Materials
@@ -3673,7 +3673,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 602374429}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3967,7 +3967,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4388,7 +4388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &793170540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4661,7 +4661,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -5486,7 +5486,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1069014477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.9}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: -0.01, y: 0.01, z: 1}
   m_Children:
   - {fileID: 620924406}
@@ -5544,7 +5544,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -5713,7 +5713,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -5885,19 +5885,19 @@ Prefab:
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 38b9dec25a8b040feafb530f729afc5e, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 100000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Name
       value: paper5with4Materials
@@ -6262,19 +6262,19 @@ Prefab:
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 38b9dec25a8b040feafb530f729afc5e, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 100000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Name
       value: paper8with4Materials
@@ -6427,19 +6427,19 @@ Prefab:
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 38b9dec25a8b040feafb530f729afc5e, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 100000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Name
       value: paper9with4Materials
@@ -6532,7 +6532,7 @@ RectTransform:
   m_GameObject: {fileID: 1220013520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.1}
-  m_LocalScale: {x: 0.009999999, y: 0.01, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children:
   - {fileID: 685305375}
   m_Father: {fileID: 1118336610}
@@ -6589,7 +6589,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -6881,7 +6881,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -7030,7 +7030,7 @@ RectTransform:
   m_GameObject: {fileID: 1308505855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.1}
-  m_LocalScale: {x: -0.009999999, y: 0.01, z: 1}
+  m_LocalScale: {x: -0.01, y: 0.01, z: 1}
   m_Children:
   - {fileID: 1807841741}
   m_Father: {fileID: 1118336610}
@@ -7087,7 +7087,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -7427,7 +7427,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -7538,8 +7538,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1458354766}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1574632896}
   m_Father: {fileID: 1731262532}
@@ -7831,7 +7831,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -8478,19 +8478,19 @@ Prefab:
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 0780b0ed53dd24c11b0af3262a9e519a, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 13700000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 38b9dec25a8b040feafb530f729afc5e, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 100000, guid: c0d18baed84ea480ca92c03eca2a5170, type: 3}
       propertyPath: m_Name
       value: paper3with4Materials
@@ -8822,7 +8822,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1731262531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children:
   - {fileID: 1458354767}
@@ -9509,7 +9509,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -9603,7 +9603,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -9662,7 +9662,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 38b9dec25a8b040feafb530f729afc5e, type: 2}
+      objectReference: {fileID: 2100000, guid: 98126bbd6a5c14b12b3dd39e53d652a4, type: 2}
     - target: {fileID: 1342332140710700, guid: f18f07c84483b47d1beb6e7a7c9549fb, type: 2}
       propertyPath: m_Name
       value: paper1with2Materials
@@ -10029,7 +10029,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -10697,7 +10697,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -10791,7 +10791,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -11147,7 +11147,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
