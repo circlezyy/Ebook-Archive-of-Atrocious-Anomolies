@@ -19,12 +19,30 @@ public class Page : MonoBehaviour
 
     public void SetActiveCanvasFront(bool isActive)
     {
+        //if (isActive)
+        //{
+        //    StartCoroutine("CanvasFadeIn", CanvasFront.GetComponent<Canvas>());
+        //}
+        //else
+        //{
+        //    StartCoroutine("CanvasFadeOut", CanvasFront.GetComponent<Canvas>());
+        //}
         CanvasFront.SetActive(isActive);
     }
 
     public void SetActiveCanvasBack(bool isActive)
     {
         CanvasBack.SetActive(isActive);
+    }
+
+    private IEnumerator CanvasFadeIn(Canvas can)
+    {
+        yield return null;
+    }
+
+    private IEnumerator CanvasFadeOut(Canvas can)
+    {
+        yield return null;
     }
 
     public void CoverLeft()
