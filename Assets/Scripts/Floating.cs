@@ -7,6 +7,7 @@ public class Floating : MonoBehaviour
 {
     public GameObject zelda;
     public GameObject girl;
+    public GameObject metroid;
     public BookAI bai;
 
     public Slider slider;
@@ -18,13 +19,18 @@ public class Floating : MonoBehaviour
 
     void Start()
     {
+        disableAll();
+    }
+
+    void disableAll()
+    {
         //disable buttons
         foreach (GameObject child in buttonGroups)
         {
             child.SetActive(false);
         }
 
-        //make animations transparent
+        //make interactables transparent
         foreach (GameObject child in interactables)
         {
             foreach (Transform grandchild in child.transform)
@@ -34,7 +40,6 @@ public class Floating : MonoBehaviour
                 grandchild.GetComponent<SpriteRenderer>().color = tmp;
             }
         }
-
     }
 
     public void ToggleAnimation(string name)
@@ -48,6 +53,7 @@ public class Floating : MonoBehaviour
                 zelda.GetComponent<Animator>().enabled = !zelda.GetComponent<Animator>().isActiveAndEnabled;
                 break;
             case "Metroid":
+                metroid.GetComponent<Animator>().enabled = !metroid.GetComponent<Animator>().isActiveAndEnabled;
                 break;
             default:
                 break;
@@ -68,6 +74,16 @@ public class Floating : MonoBehaviour
                     child.GetComponent<SpriteRenderer>().color = tmp;
                 }
                 break;
+            case 2:
+                buttonGroups[1].SetActive(false);
+
+                foreach (Transform child in interactables[1].transform)
+                {
+                    Color tmp = child.GetComponent<SpriteRenderer>().color;
+                    tmp.a = 0;
+                    child.GetComponent<SpriteRenderer>().color = tmp;
+                }
+                break;
             default:
                 break;
         }
@@ -82,6 +98,16 @@ public class Floating : MonoBehaviour
                 buttonGroups[0].SetActive(true);
 
                 foreach (Transform child in interactables[0].transform)
+                {
+                    Color tmp = child.GetComponent<SpriteRenderer>().color;
+                    tmp.a = 1;
+                    child.GetComponent<SpriteRenderer>().color = tmp;
+                }
+                break;
+            case 2:
+                buttonGroups[1].SetActive(true);
+
+                foreach (Transform child in interactables[1].transform)
                 {
                     Color tmp = child.GetComponent<SpriteRenderer>().color;
                     tmp.a = 1;

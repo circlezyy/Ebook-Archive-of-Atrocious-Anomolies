@@ -406,6 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zelda: {fileID: 2048523188}
   girl: {fileID: 341862456}
+  metroid: {fileID: 442321085}
   bai: {fileID: 0}
   slider: {fileID: 1821466123}
   interactables:
@@ -1112,6 +1113,11 @@ MonoBehaviour:
   zelda: {fileID: 0}
   girl: {fileID: 0}
   bai: {fileID: 0}
+--- !u!1 &442321085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1857290869386466, guid: 857408344575a4a41804c3f76c529c43,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421889523}
 --- !u!4 &442321088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4185445491872020, guid: 857408344575a4a41804c3f76c529c43,
@@ -2957,6 +2963,10 @@ Prefab:
     - target: {fileID: 4185445491872020, guid: 857408344575a4a41804c3f76c529c43, type: 2}
       propertyPath: m_LocalScale.z
       value: 2.3564
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857290869386466, guid: 857408344575a4a41804c3f76c529c43, type: 2}
+      propertyPath: m_Name
+      value: Metroid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 857408344575a4a41804c3f76c529c43, type: 2}
