@@ -8,15 +8,20 @@ public class BookStateMachine
     public GameObject Owner;
 
     public IState notTurningState;
+    public IState hideInteractables;
+    public IState revealInteractables;
     public IState forwardState;
     public IState backState;
+
 
     public BookStateMachine(GameObject o)
     {
         Owner = o;
 
         notTurningState = new NotTurningState(this);
+        hideInteractables = new HideInteractables(this);
         forwardState = new ForwardState(this);
+        revealInteractables = new RevealInteractables(this);
         backState = new BackState(this);
 
         currentState = notTurningState;

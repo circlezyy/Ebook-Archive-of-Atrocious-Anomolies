@@ -1,0 +1,1884 @@
+fileFormatVersion: 2
+guid: 84b375113817b491e900799a6ccfe995
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_0
+    21300002: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_1
+    21300004: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_2
+    21300006: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_3
+    21300008: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_4
+    21300010: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_5
+    21300012: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_6
+    21300014: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_7
+    21300016: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_8
+    21300018: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_9
+    21300020: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_10
+    21300022: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_11
+    21300024: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_12
+    21300026: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_13
+    21300028: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_14
+    21300030: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_15
+    21300032: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_16
+    21300034: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_17
+    21300036: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_18
+    21300038: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_19
+    21300040: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_20
+    21300042: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_21
+    21300044: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_22
+    21300046: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_23
+    21300048: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_24
+    21300050: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_25
+    21300052: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_26
+    21300054: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_27
+    21300056: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_28
+    21300058: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_29
+    21300060: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_30
+    21300062: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_31
+    21300064: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_32
+    21300066: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_33
+    21300068: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_34
+    21300070: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_35
+    21300072: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_36
+    21300074: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_37
+    21300076: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_38
+    21300078: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_39
+    21300080: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_40
+    21300082: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_41
+    21300084: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_42
+    21300086: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_43
+    21300088: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_44
+    21300090: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_45
+    21300092: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_46
+    21300094: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_47
+    21300096: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_48
+    21300098: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_49
+    21300100: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_50
+    21300102: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_51
+    21300104: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_52
+    21300106: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_53
+    21300108: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_54
+    21300110: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_55
+    21300112: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_56
+    21300114: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_57
+    21300116: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_58
+    21300118: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_59
+    21300120: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_60
+    21300122: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_61
+    21300124: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_62
+    21300126: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_63
+    21300128: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_64
+    21300130: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_65
+    21300132: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_66
+    21300134: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_67
+    21300136: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_68
+    21300138: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_69
+    21300140: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_70
+    21300142: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_71
+    21300144: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_72
+    21300146: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_73
+    21300148: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_74
+    21300150: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_75
+    21300152: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_76
+    21300154: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_77
+    21300156: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_78
+    21300158: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_79
+    21300160: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_80
+    21300162: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_81
+    21300164: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_82
+    21300166: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_83
+    21300168: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_84
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 735
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9800a281b2004b60a440a4a907d12d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 735
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39ba0a0555fc46e6a21aace89a1f9c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_2
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 735
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a375124c445934e45ad1c42bc04433e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 735
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9891280a53624b5fa7985153c9360c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_4
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 735
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49d45465c9b24a43a507b6e479a78fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 735
+        width: 43
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64c1aec4c6ea4539840f9e8685bbd09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_6
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 735
+        width: 46
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4de743bddde140dfa61584a4f3a4db9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 636
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6e718b7c7d045b5998832ee1b39ef6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 636
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55e3cee92de644529e036634aa4545b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_9
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 636
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790ca79ac8b154461a4f0ddc15565251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_10
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 636
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49bb6826edaf421abf1690b56913fb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_11
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 636
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9acf10eee3f643e49ecab8e4cb5f361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_12
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 636
+        width: 45
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d95dd4f1043407e8f79dbbce785ea3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_13
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 636
+        width: 41
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3614049f2e17843b49bc52b42d7ffa6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_14
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 636
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4231e3cec7a5042f3b009a60c62d950a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_15
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 636
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f4c315a7c4442a5b3af780044935fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_16
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 636
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d532636033e4328a56736861290efe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_17
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 636
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8003a9bc4e254373beb4dfd2349c638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_18
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 636
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366e6431c87544fb6895fcf30eae25c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_19
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 536
+        width: 44
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab6f7545826e4bc78e9654b5b66b32c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_20
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 536
+        width: 56
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c805f355feb67417c8b445db1e291ba6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_21
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 537
+        width: 62
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990dd734187d84ab9bf820c0640b8887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_22
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 538
+        width: 67
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff496c313141f49e0bcf881fd97f1cd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_23
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 537
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d677d9e62f94ce193e5c0f8e466c93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_24
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 537
+        width: 37
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ac2cc65b74945e09a7d6d9140798e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_25
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 537
+        width: 53
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cf1b6ebdd554b639bcb16c3719b2d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_26
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 537
+        width: 63
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049a1f05cd93f4126bdf0038a68260b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_27
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 539
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc7468f4f738457baa3bd006d58e1c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_28
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 536
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c5f7494efd24ff083e4b79c98afe44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_29
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 444
+        width: 47
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4376ebbbe14b400b8bc7b6e3b9d7744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_30
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 444
+        width: 58
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62006a4e3c0cb426bbf1368cbb167e69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_31
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 445
+        width: 66
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd63d9a2dc5a46ed813788ece692f48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_32
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 446
+        width: 69
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3655630ed030401e9324a6b30c8385d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_33
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 445
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46d8383bcb924d99915cbf3cff85fb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_34
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 445
+        width: 40
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0cdbefbb669643429e8d4327768ba83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_35
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 445
+        width: 55
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d73b298fae445549d3aa38079c5142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_36
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 445
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9cc9915b1264a8297746c914b3059e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_37
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 447
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739986188eb2b4434a4029cf3f87a379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_38
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 444
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c24be7c714f4f079ce8cf5a1493c50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_39
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 336
+        width: 41
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c208c74dc344231b1a25065497a3e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_40
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 336
+        width: 41
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd67212526304097a29b735c009b7d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 336
+        width: 41
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bee74516bedd4139bf1fa65c5a311a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_42
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 336
+        width: 42
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b053cc5986a24ed492d3c8a24f96374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_43
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 336
+        width: 41
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f0b4d288c6546f4984bb8266b49609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_44
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 336
+        width: 38
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cb8e814b014415890c763b69473dd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_45
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 336
+        width: 37
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5452abf86d074be19c9d29fc3c2f1f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_46
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 336
+        width: 42
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd1416f8a4414bbebd1198196496d51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_47
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 336
+        width: 41
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8ae0845eb274f3185582c4214d5774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_48
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 336
+        width: 41
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f877dbc569f41c582f74f63914dfeb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_49
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 225
+        width: 49
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0ba8508c1c84daa8fcb22d46cb830e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_50
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 225
+        width: 49
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb5f214588e34933835b57458b56b3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_51
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 225
+        width: 49
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68044be9b32ae40e69c8b3114443b1d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_52
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 225
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042f3fdeb94cb4696a0485171aad2447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_53
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 225
+        width: 49
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae88c0fb755d4faaaf25c1796e855b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_54
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 225
+        width: 39
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5045d9ad618b7443e9d47a7208820ba2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_55
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 225
+        width: 37
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dad390337d84546831645315033f82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_56
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 225
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d8e5e8b46a4412cb2f62652012ac70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_57
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 225
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d3d55e70d794f188d7401785053f49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_58
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 225
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ee23e7bd612444d841b5d0283e31c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_59
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 225
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d240a2b23c2425498816a416a72ce3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_60
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 225
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5869d995ea32042079923e552f6989d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_61
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 115
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42eb874a9a67342afa05ee5139cf4218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_62
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 115
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c402a2bf68948ec8dd68929234f131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_63
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 115
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600f2225b3efe42d78837c2ab9dbbe1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_64
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 115
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52226d65708046bd8788ad91cd88b23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_65
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 115
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae90e037f44b4d6bad8fefbbb254c91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_66
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 115
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf3282ad453a45c7801dace4d1b2077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_67
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 115
+        width: 36
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774389f939d134792b9f676eda5463b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_68
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 115
+        width: 47
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607a00effccde4d6eb383756c71a8867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_69
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 115
+        width: 47
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6756e390de9034ffb9094a4a83c1cecd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_70
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 115
+        width: 47
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b703b318d13a6416c9e50e6a70a5eab9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_71
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 115
+        width: 47
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bf5a5fdadad4c1a8becf67cf1628a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_72
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 115
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b3cf28939974c58907beadec4e07e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_73
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 21
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942efcffd82de4fc0837df8b21ff3c25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_74
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 21
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f53f36cf46349f9befea1b62e30ea5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_75
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 21
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436808771df4c4160a274eaf5df35222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_76
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 21
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80394c6564609486f9b3304e6f92072f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_77
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 21
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a941403adfd4a4dd3bf1596cae2221a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_78
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 21
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdf7d8edc6f24a2fb2999984c830055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_79
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 21
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951321b0f3942461cb34150853a6a973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_80
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d85cde926b8473299353c772928697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_81
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 21
+        width: 43
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68c413f356e14e1fbb67223cdf9790d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_82
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b5e793db83545428693a9aa35cb513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_83
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f66ccabfa904a1eb227c20aa726051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metroid_zero_mission__sprite_sheet__upgrade_by_omegachaino-dcdl6q7_84
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80af745160f34f25a3df1681c28da65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c06987cf65ea445e189f07d04e4ece9c
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

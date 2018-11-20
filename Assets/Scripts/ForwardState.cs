@@ -26,8 +26,7 @@ public class ForwardState : IState
     {
         if (ai.changes == 0)
         {
-            ai.ui.ClearInput();
-            stateMachine.ChangeState(stateMachine.notTurningState);
+            stateMachine.ChangeState(stateMachine.revealInteractables);
         }
     }
 }

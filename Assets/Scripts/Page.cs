@@ -1,38 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Page : MonoBehaviour
 {
+    public GameObject zelda;
+    public GameObject girl;
     public BookAI bai;
-    public GameObject CanvasFront;
-    public GameObject CanvasBack;
 
     public void Start()
     {
         bai = transform.GetComponentInParent<BookAI>();
-        CanvasFront = transform.Find("CanvasFront").gameObject;
-        CanvasBack = transform.Find("CanvasBack").gameObject;
-        SetActiveCanvasFront(false);
-        SetActiveCanvasBack(false);
+    }
+
+    public void ToggleZelda()
+    {
+        zelda.GetComponent<Animator>().enabled = !zelda.GetComponent<Animator>().isActiveAndEnabled;
+    }
+
+    public void ToggleGirl()
+    {
+        girl.GetComponent<Animator>().enabled = !girl.GetComponent<Animator>().isActiveAndEnabled;
     }
 
     public void SetActiveCanvasFront(bool isActive)
     {
-        //if (isActive)
-        //{
-        //    StartCoroutine("CanvasFadeIn", CanvasFront.GetComponent<Canvas>());
-        //}
-        //else
-        //{
-        //    StartCoroutine("CanvasFadeOut", CanvasFront.GetComponent<Canvas>());
-        //}
-        CanvasFront.SetActive(isActive);
     }
 
     public void SetActiveCanvasBack(bool isActive)
     {
-        CanvasBack.SetActive(isActive);
     }
 
     private IEnumerator CanvasFadeIn(Canvas can)
@@ -48,6 +45,7 @@ public class Page : MonoBehaviour
     public void CoverLeft()
     {
         rotateToYRotation(180f, 1 * bai.rate);
+
     }
 
     public void CoverRight()
@@ -296,5 +294,10 @@ public class Page : MonoBehaviour
             yield return null;
         }
         bai.changes--;
+    }
+
+    private void reveal()
+    {
+        print("revealed");
     }
 }

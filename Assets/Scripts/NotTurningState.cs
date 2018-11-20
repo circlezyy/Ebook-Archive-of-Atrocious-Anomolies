@@ -15,7 +15,6 @@ public class NotTurningState : IState
 
     public void EnterState(GameObject owner)
     {
-
     }
 
     public void ExitState(GameObject owner)
@@ -24,13 +23,9 @@ public class NotTurningState : IState
 
     public void UpdateState(GameObject owner)
     {
-        if (ai.ui.turnLeft)
+        if (ai.ui.turnLeft || ai.ui.turnRight)
         {
-            stateMachine.ChangeState(stateMachine.backState);
-        }
-        else if (ai.ui.turnRight)
-        {
-            stateMachine.ChangeState(stateMachine.forwardState);
+            stateMachine.ChangeState(stateMachine.hideInteractables);
         }
     }
 }
