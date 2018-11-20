@@ -38,9 +38,10 @@ public class Floating : MonoBehaviour
         {
             foreach (Transform grandchild in child.transform)
             {
-                Color tmp = grandchild.GetComponent<SpriteRenderer>().color;
-                tmp.a = 0;
-                grandchild.GetComponent<SpriteRenderer>().color = tmp;
+                //Color tmp = grandchild.GetComponent<SpriteRenderer>().color;
+                //tmp.a = 0;
+                //grandchild.GetComponent<SpriteRenderer>().color = tmp;
+                grandchild.gameObject.SetActive(false);
             }
         }
     }
@@ -89,9 +90,11 @@ public class Floating : MonoBehaviour
 
                 foreach (Transform child in interactables[0].transform)
                 {
-                    Color tmp = child.GetComponent<SpriteRenderer>().color;
-                    tmp.a = 0;
-                    child.GetComponent<SpriteRenderer>().color = tmp;
+                    //Color tmp = child.GetComponent<SpriteRenderer>().color;
+                    //tmp.a = 0;
+                    //child.GetComponent<SpriteRenderer>().color = tmp;
+                    child.gameObject.SetActive(false);
+
                 }
                 break;
             case 2:
@@ -99,9 +102,11 @@ public class Floating : MonoBehaviour
 
                 foreach (Transform child in interactables[1].transform)
                 {
-                    Color tmp = child.GetComponent<SpriteRenderer>().color;
-                    tmp.a = 0;
-                    child.GetComponent<SpriteRenderer>().color = tmp;
+                    //Color tmp = child.GetComponent<SpriteRenderer>().color;
+                    //tmp.a = 0;
+                    //child.GetComponent<SpriteRenderer>().color = tmp;
+                    child.gameObject.SetActive(false);
+
                 }
                 break;
             default:
@@ -119,9 +124,10 @@ public class Floating : MonoBehaviour
 
                 foreach (Transform child in interactables[0].transform)
                 {
-                    Color tmp = child.GetComponent<SpriteRenderer>().color;
-                    tmp.a = 1;
-                    child.GetComponent<SpriteRenderer>().color = tmp;
+                    //Color tmp = child.GetComponent<SpriteRenderer>().color;
+                    //tmp.a = 1;
+                    //child.GetComponent<SpriteRenderer>().color = tmp;
+                    child.gameObject.SetActive(true);
                 }
                 break;
             case 2:
@@ -129,9 +135,10 @@ public class Floating : MonoBehaviour
 
                 foreach (Transform child in interactables[1].transform)
                 {
-                    Color tmp = child.GetComponent<SpriteRenderer>().color;
-                    tmp.a = 1;
-                    child.GetComponent<SpriteRenderer>().color = tmp;
+                    //Color tmp = child.GetComponent<SpriteRenderer>().color;
+                    //tmp.a = 1;
+                    //child.GetComponent<SpriteRenderer>().color = tmp;
+                    child.gameObject.SetActive(true);
                 }
                 break;
             default:
