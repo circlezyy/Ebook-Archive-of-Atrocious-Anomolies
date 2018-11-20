@@ -8,6 +8,9 @@ public class Floating : MonoBehaviour
     public GameObject zelda;
     public GameObject girl;
     public GameObject metroid;
+    public GameObject postit;
+
+
     public BookAI bai;
 
     public Slider slider;
@@ -54,6 +57,23 @@ public class Floating : MonoBehaviour
                 break;
             case "Metroid":
                 metroid.GetComponent<Animator>().enabled = !metroid.GetComponent<Animator>().isActiveAndEnabled;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void Trigger(string name)
+    {
+        switch (name)
+        {
+            case "Postit_flipup":
+                postit.GetComponent<Animator>().SetTrigger("flipup");
+                postit.GetComponent<Animator>().ResetTrigger("flipdown");
+                break;
+            case "Postit_flipdown":
+                postit.GetComponent<Animator>().SetTrigger("flipdown");
+                postit.GetComponent<Animator>().ResetTrigger("flipup");
                 break;
             default:
                 break;
