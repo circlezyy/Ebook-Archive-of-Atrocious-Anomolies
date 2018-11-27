@@ -1,12 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class UserIPadInput : MonoBehaviour
+public class UserIPadInput : IUserInput
 {
-    public bool turnLeft = false;
-    public bool turnRight = false;
-
     //RaycastHit2D hit;
     //Vector2[] touches = new Vector2[5];
 
@@ -14,18 +9,7 @@ public class UserIPadInput : MonoBehaviour
     public Vector2 direction;
     public bool directionChosen;
 
-    void Start()
-    {
-
-    }
-
-    public void ClearInput()
-    {
-        turnLeft = false;
-        turnRight = false;
-    }
-
-    void Update()
+    public string GetInput()
     {
         // Track a single touch as a direction control.
         if (Input.touchCount > 0)
@@ -56,11 +40,13 @@ public class UserIPadInput : MonoBehaviour
         if (directionChosen)
         {
             directionChosen = false;
-            if (direction.x > 0)
-                turnLeft = true;
-
             if (direction.x < 0)
-                turnRight = true;
+                return "left";
+
+            if (direction.x > 0)
+                return "right";
         }
+
+        return null;
     }
 }

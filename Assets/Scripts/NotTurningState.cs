@@ -23,9 +23,9 @@ public class NotTurningState : IState
 
     public void UpdateState(GameObject owner)
     {
-        if (ai.ui.turnLeft || ai.ui.turnRight)
-        {
-            stateMachine.ChangeState(stateMachine.hideInteractables);
-        }
+        //if (ai.ui.turnLeft || ai.ui.turnRight)
+        //{
+        //    stateMachine.ChangeState(stateMachine.hideInteractables);
+       // }
     }
 }

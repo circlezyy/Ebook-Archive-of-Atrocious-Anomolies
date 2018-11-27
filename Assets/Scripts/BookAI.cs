@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BookAI : MonoBehaviour
 {
     public BookStateMachine StateMachine { get; set; }
-    public UserInput ui;
+    public UserKeyboardInput ui;
 
     public Page[] p;
 
@@ -89,7 +89,7 @@ public class BookAI : MonoBehaviour
 
     public void TurnForward()
     {
-        ui.ClearInput();
+        //ui.ClearInput();
 
         if (currPage == p.Length)
             return;
@@ -145,7 +145,7 @@ public class BookAI : MonoBehaviour
 
     public void TurnBack()
     {
-        ui.ClearInput();
+        //ui.ClearInput();
 
         //At beginning of book, no more pages to turn
         if (currPage == 0)

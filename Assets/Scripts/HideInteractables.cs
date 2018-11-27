@@ -26,14 +26,14 @@ public class HideInteractables : IState
     {
         if (ai.changes == 0)
         {
-            if (ai.ui.turnLeft)
-            {
-                stateMachine.ChangeState(stateMachine.backState);
-            }
-            else if (ai.ui.turnRight)
-            {
-                stateMachine.ChangeState(stateMachine.forwardState);
-            }
+            //if (ai.ui.turnLeft)
+            //{
+            //    stateMachine.ChangeState(stateMachine.backState);
+            //}
+            //else if (ai.ui.turnRight)
+            //{
+            //    stateMachine.ChangeState(stateMachine.forwardState);
+            //}
         }
     }
 }
