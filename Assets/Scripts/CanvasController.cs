@@ -16,7 +16,8 @@ public class CanvasController: MonoBehaviour
     public GameObject map;
 
     private BookController bc;
-
+    private MapController mc;
+    
     /*
      * This function is called from the BookAnimatedAI when it is not flipping
      * so that the canvas controller can reveal the correct animation panels   
@@ -33,23 +34,45 @@ public class CanvasController: MonoBehaviour
         }
     }
 
-    public void FlippingRight(string currPage)
+    /* Called from BookController
+     *   
+     * BookController will be flipping right so hide everything
+     */
+    public void FlippingRightRequested(int currPage)
     {
-        map.SetActive(false);
+        if (mc.isActiveAndEnabled)
+            mc.FlipRequest(currPage - 1);
+        else
+            AllAnimationsOnPageAreDoneSoGoToThisPage(currPage - 1);
     }
 
-    public void FlippingLeft(string currPage)
+    /* Called from BookController
+     *    
+     * BookController will be flipping left so hide everything
+     */
+    public void FlippingLeftRequested(int currPage)
     {
-        map.SetActive(false);
+        if (mc.isActiveAndEnabled)
+            mc.FlipRequest(currPage + 1);
+        else
+        {
+            AllAnimationsOnPageAreDoneSoGoToThisPage(currPage + 1);
+        }
     }
 
     public void AllAnimationsOnPageAreDoneSoGoToThisPage(int pageDestination)
     {
-        bc.FlipLeftToPage(pageDestination);
+        if (bc.currPage < pageDestination)
+            bc.FlipLeftToPage(pageDestination);
+        else if (bc.currPage > pageDestination)
+            bc.FlipRightToPage(pageDestination);
+        else
+            Debug.Log("error");
     }
 
     private void Start()
     {
         bc = book.GetComponent<BookController>();
+        mc = map.GetComponent<MapController>();
     }
 }

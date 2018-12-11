@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MapController : MonoBehaviour
 {
-    public GameObject[] buttons;
+    public GameObject[] subcomponents;
     public Animator[] buttonAnimators;
     public GameObject book;
     public GameObject canvas;
@@ -14,19 +14,18 @@ public class MapController : MonoBehaviour
     private CanvasController cc;
     private int pageDestination;
 
-    private int disabledButtonsCount;
+    private int disabledSubComponentsCount;
 
     /*
-     * Called by a specific button click
      * 
      * MapController remembers which page to go to
      * 
      * Triggers the disappearing of all buttons
      */
-    public void MapButtonClick(int num)
+    public void FlipRequest(int num)
     {
         pageDestination = num;
-        TellAllButtonsToDisappear();
+        HideSubcomponents();
     }
 
     /*
@@ -34,10 +33,10 @@ public class MapController : MonoBehaviour
      */
     public void ButtonsDisappeared()
     {
-        disabledButtonsCount++;
-        if (disabledButtonsCount == buttonAnimators.Length)
+        disabledSubComponentsCount++;
+
+        if (disabledSubComponentsCount == buttonAnimators.Length)
         {
-            //send message to CanvasController that it can turn the page
             cc.AllAnimationsOnPageAreDoneSoGoToThisPage(pageDestination);
             gameObject.SetActive(false);
         }
@@ -51,28 +50,29 @@ public class MapController : MonoBehaviour
 
     private void OnEnable()
     {
-        disabledButtonsCount = 0;
+        disabledSubComponentsCount = 0;
+        EnableAllSubcomponents();
     }
 
     /*
-     * Enables all buttons
+     * Enables all subcomponents
      */
-    private void EnableAllButtons()
+    private void EnableAllSubcomponents()
     {
-        foreach (GameObject button in buttons)
+        foreach (GameObject subcomponent in subcomponents)
         {
-            button.SetActive(true);
+            subcomponent.SetActive(true);
         }
     }
 
     /*
-     * Triggers the disappearing animation for all buttons
+     * Triggers the disappearing animation for all subcomponents
      */
-    private void TellAllButtonsToDisappear()
+    private void HideSubcomponents()
     {
         foreach (Animator animator in buttonAnimators)
         {
-            animator.SetTrigger("disappear");
+            animator.SetTrigger("hide");
         }
     }
 }

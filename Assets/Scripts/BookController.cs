@@ -18,9 +18,23 @@ public class BookController : MonoBehaviour
     private IUserInput touchInput;
     private IUserInput inputStrategy;
 
+    public void FlipRightToPage(int targetPage)
+    {
+        StartCoroutine("IE_FlipRightToPage", targetPage);
+    }
+
     public void FlipLeftToPage(int targetPage)
     {
         StartCoroutine("IE_FlipLeftToPage", targetPage);
+    }
+
+    private IEnumerator IE_FlipRightToPage(int targetPage)
+    {
+        while (currPage > targetPage)
+        {
+            FlipRight();
+            yield return new WaitForSeconds(0.25f);
+        }
     }
 
     private IEnumerator IE_FlipLeftToPage(int targetPage)
@@ -66,31 +80,39 @@ public class BookController : MonoBehaviour
         switch (inputStrategy.GetInput())
         {
             case "left":
-                FlipLeft();
+                FlipLeftRequest();
                 break;
             case "right":
-                FlipRight();
+                FlipRightRequest();
                 break;
             default:
                 break;
         }
     }
 
-    private void FlipLeft()
+    private void FlipLeftRequest()
     {
         if (FlippingRightCount == 0 && currPage < animator.Length)
         {
-            canvasController.FlippingLeft(currPage.ToString());
-            animator[currPage++].SetTrigger("flipLeft");
+            canvasController.FlippingLeftRequested(currPage);
         }
+    }
+
+    private void FlipRightRequest()
+    {
+        if (FlippingLeftCount == 0 && currPage > 0)
+        {
+            canvasController.FlippingRightRequested(currPage);
+        }
+    }
+
+    private void FlipLeft()
+    {
+        animator[currPage++].SetTrigger("flipLeft");
     }
 
     private void FlipRight()
     {
-        if (FlippingLeftCount == 0 && currPage > 0)
-        {
-            canvasController.FlippingRight(currPage.ToString());
-            animator[--currPage].SetTrigger("flipRight");
-        }
+        animator[--currPage].SetTrigger("flipRight");
     }
 }

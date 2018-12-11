@@ -35,7 +35,6 @@ public class PageFlipLeft : StateMachineBehaviour
             hasDisabledLeft = true;
             if (thisCurrPage - 2 >= 1)
             {
-                Debug.Log("disabled page " + (thisCurrPage - 2).ToString());
                 bc.EnablePage(thisCurrPage - 2, false);
             }
         }

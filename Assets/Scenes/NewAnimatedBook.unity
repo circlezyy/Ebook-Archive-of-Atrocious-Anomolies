@@ -606,6 +606,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: b5c392c14b3a94acca7edc4208debebc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f487038db1f748bdb4f88a74e80e8af, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c392c14b3a94acca7edc4208debebc, type: 3}
   m_IsPrefabAsset: 0
@@ -920,7 +924,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 951747354}
-        m_MethodName: MapButtonClick
+        m_MethodName: FlipRequest
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1075,7 +1079,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 951747354}
-        m_MethodName: MapButtonClick
+        m_MethodName: FlipRequest
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2460,7 +2464,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 951747354}
-        m_MethodName: MapButtonClick
+        m_MethodName: FlipRequest
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3573,7 +3577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5502dfb6b2d484e23b85453780c2ba31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons:
+  subcomponents:
   - {fileID: 1887895268}
   - {fileID: 246753044}
   - {fileID: 1765380602}
@@ -4727,7 +4731,7 @@ Prefab:
     - target: {fileID: 13700000, guid: b5c392c14b3a94acca7edc4208debebc, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: c5ce4782d078b40d690e95c4775b4d4f, type: 2}
+      objectReference: {fileID: 2100000, guid: 29c432411fa3c42a5be8fc8b777c0abe, type: 2}
     - target: {fileID: 400000, guid: b5c392c14b3a94acca7edc4208debebc, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -6699,7 +6703,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 951747354}
-        m_MethodName: MapButtonClick
+        m_MethodName: FlipRequest
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7399,7 +7403,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 951747354}
-        m_MethodName: MapButtonClick
+        m_MethodName: FlipRequest
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7554,7 +7558,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 951747354}
-        m_MethodName: MapButtonClick
+        m_MethodName: FlipRequest
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
