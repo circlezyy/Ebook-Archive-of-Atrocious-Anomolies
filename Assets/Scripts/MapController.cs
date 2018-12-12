@@ -6,55 +6,79 @@ using UnityEngine.UI;
 public class MapController : MonoBehaviour
 {
     public GameObject[] subcomponents;
-    public Animator[] buttonAnimators;
-    public GameObject book;
     public GameObject canvas;
 
-    private BookController bc;
     private CanvasController cc;
     private int pageDestination;
 
-    private int disabledSubComponentsCount;
+    private int hiddenSubcomponentCount;
 
-    /*
+    public void ButtonClicked_Mushroomnote_wendigo()
+    {
+        gameObject.transform.Find("Layer2_1").gameObject.SetActive(true);
+    }
+
+    public void ButtonClicked_Hoofnote_wendigo()
+    {
+        gameObject.transform.Find("Layer2_2").gameObject.SetActive(true);
+    }
+
+    public void ButtonClicked_Skullnote_wendigo()
+    {
+        gameObject.transform.Find("Layer2_3").gameObject.SetActive(true);
+    }
+
+    public void ButtonClicked_Hide_All_Layer2()
+    {
+        gameObject.transform.Find("Layer2_1").gameObject.SetActive(false);
+        gameObject.transform.Find("Layer2_2").gameObject.SetActive(false);
+        gameObject.transform.Find("Layer2_3").gameObject.SetActive(false);
+    }
+
+    //public void ButtonClicked
+
+    /* Called by CanvasController
      * 
      * MapController remembers which page to go to
      * 
      * Triggers the disappearing of all buttons
      */
-    public void FlipRequest(int num)
+    public void Hide(int num)
     {
         pageDestination = num;
-        HideSubcomponents();
+        HideAllSubcomponents();
     }
 
     /*
-     * Called when button disappearing animation finishes
+     * Called by Button
+     * 
+     * Occurs when button disappearing animation finishes
      */
-    public void ButtonsDisappeared()
+    public void SubcomponentHidden()
     {
-        disabledSubComponentsCount++;
+        hiddenSubcomponentCount++;
 
-        if (disabledSubComponentsCount == buttonAnimators.Length)
+        if (hiddenSubcomponentCount == subcomponents.Length)
         {
-            cc.AllAnimationsOnPageAreDoneSoGoToThisPage(pageDestination);
+            cc.PanelHidden();
             gameObject.SetActive(false);
         }
     }
 
     private void Start()
     {
-        bc = book.GetComponent<BookController>();
         cc = canvas.GetComponent<CanvasController>();
     }
 
     private void OnEnable()
     {
-        disabledSubComponentsCount = 0;
+        hiddenSubcomponentCount = 0;
         EnableAllSubcomponents();
     }
 
     /*
+     * Called by this script
+     * 
      * Enables all subcomponents
      */
     private void EnableAllSubcomponents()
@@ -66,13 +90,15 @@ public class MapController : MonoBehaviour
     }
 
     /*
+     * Called by this script
+     * 
      * Triggers the disappearing animation for all subcomponents
      */
-    private void HideSubcomponents()
+    private void HideAllSubcomponents()
     {
-        foreach (Animator animator in buttonAnimators)
+        foreach (GameObject s in subcomponents)
         {
-            animator.SetTrigger("hide");
+            s.GetComponent<Animator>().SetTrigger("hide");
         }
     }
 }

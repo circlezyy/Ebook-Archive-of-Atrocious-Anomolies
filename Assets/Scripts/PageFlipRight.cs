@@ -13,7 +13,7 @@ public class PageFlipRight : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         bc = animator.gameObject.transform.parent.GetComponentInParent<BookController>();
-        thisCurrPage = bc.currPage;
+        thisCurrPage = bc.CurrPage;
         hasDisabledRight = false;
         hasEnabledLeft = false;
         t = animator.gameObject.transform;
@@ -45,7 +45,6 @@ public class PageFlipRight : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         bc.FlippingRightCount--;
-
-        bc.RevealLevel0Canvas();
+        bc.DoneFlipping();
     }
 }

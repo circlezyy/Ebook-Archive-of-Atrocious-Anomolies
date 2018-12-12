@@ -14,20 +14,32 @@ public class CanvasController: MonoBehaviour
 {
     public GameObject book;
     public GameObject map;
+    public GameObject wendigo;
 
     private BookController bc;
     private MapController mc;
-    
+    private MapController wc;
+
+    public bool IsCleared { get; private set; }
+
     /*
-     * This function is called from the BookAnimatedAI when it is not flipping
-     * so that the canvas controller can reveal the correct animation panels   
+     * Called from BookController
+     * 
+     * The book has stopped flipping
+     *    
+     * so that the canvas controller can reveal panels 
      */
-    public void NoFlipping(string currPage)
+    public void EnablePanels(int currPage)
     {
+        IsCleared = false;
+
         switch (currPage)
         {
-            case "1":
+            case 1:
                 map.SetActive(true);
+                break;
+            case 2:
+                wendigo.SetActive(true);
                 break;
             default:
                 break;
@@ -35,44 +47,40 @@ public class CanvasController: MonoBehaviour
     }
 
     /* Called from BookController
-     *   
-     * BookController will be flipping right so hide everything
-     */
-    public void FlippingRightRequested(int currPage)
-    {
-        if (mc.isActiveAndEnabled)
-            mc.FlipRequest(currPage - 1);
-        else
-            AllAnimationsOnPageAreDoneSoGoToThisPage(currPage - 1);
-    }
-
-    /* Called from BookController
      *    
      * BookController will be flipping left so hide everything
      */
-    public void FlippingLeftRequested(int currPage)
+    public void HidePanels(int currPage)
     {
-        if (mc.isActiveAndEnabled)
-            mc.FlipRequest(currPage + 1);
+        if (!mc.isActiveAndEnabled && !wc.isActiveAndEnabled)
+        {
+            IsCleared = true;
+        }
         else
         {
-            AllAnimationsOnPageAreDoneSoGoToThisPage(currPage + 1);
+            if (mc.isActiveAndEnabled)
+                mc.Hide(currPage + 1);
+
+            if (wc.isActiveAndEnabled)
+                wc.Hide(currPage + 1);
         }
     }
 
-    public void AllAnimationsOnPageAreDoneSoGoToThisPage(int pageDestination)
+    /*
+     * Called from MapController
+     * Called from WendigoController
+     * 
+     * Notification that they are disabled   
+     */
+    public void PanelHidden()
     {
-        if (bc.currPage < pageDestination)
-            bc.FlipLeftToPage(pageDestination);
-        else if (bc.currPage > pageDestination)
-            bc.FlipRightToPage(pageDestination);
-        else
-            Debug.Log("error");
+        IsCleared = true;
     }
 
     private void Start()
     {
         bc = book.GetComponent<BookController>();
         mc = map.GetComponent<MapController>();
+        wc = wendigo.GetComponent<MapController>();
     }
 }

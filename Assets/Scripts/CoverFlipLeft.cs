@@ -12,7 +12,7 @@ public class CoverFlipLeft : StateMachineBehaviour
     {
         ai = animator.gameObject.transform.parent.GetComponentInParent<BookController>();
 
-        thisCurrPage = ai.currPage;
+        thisCurrPage = ai.CurrPage;
 
         ai.FlippingLeftCount++;
     }
@@ -26,6 +26,6 @@ public class CoverFlipLeft : StateMachineBehaviour
     {
         ai.FlippingLeftCount--;
 
-        ai.RevealLevel0Canvas();
+        ai.DoneFlipping();
     }
 }

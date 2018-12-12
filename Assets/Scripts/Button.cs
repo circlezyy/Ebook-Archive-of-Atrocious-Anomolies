@@ -21,7 +21,7 @@ public class Button : MonoBehaviour
      */
     public void FinishedAnimation()
     {
-        mapController.ButtonsDisappeared();
+        mapController.SubcomponentHidden();
         gameObject.SetActive(false);
     }
 }
