@@ -9,8 +9,9 @@ public class BookController : MonoBehaviour
     public GameObject innerPages;
     public CanvasController canvasController;
 
-    public int CurrPage { get; set; }
     private int DestPage { get; set; }
+
+    public int CurrPage { get; set; }
     public int FlippingLeftCount { get; set; }
     public int FlippingRightCount { get; set; }
 
@@ -86,8 +87,9 @@ public class BookController : MonoBehaviour
         }
     }
 
-
-
+    /*
+     * 
+     */
     private void GetInput()
     {
         switch (inputStrategy.GetInput())
