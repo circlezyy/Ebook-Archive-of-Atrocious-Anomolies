@@ -1,86 +1,48 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-/*
- * 1. Holds a reference to all animation panels
- * 
- * 2. Enables and disables all animation panels
- * 
- * 
- */
-public class CanvasController: MonoBehaviour
+public abstract class CanvasController: MonoBehaviour
 {
-    public GameObject book;
-    public GameObject map;
-    public GameObject wendigo;
+    protected GameObject basecomponents;
 
-    private BookController bc;
-    private MapController mc;
-    private MapController wc;
+    protected readonly float TIME_DELAY_REVEAL_COMPONENTS = 0.3f;
 
-    public bool IsCleared { get; private set; }
-
-    /*
-     * Called from BookController
-     * 
-     * The book has stopped flipping
-     *    
-     * so that the canvas controller can reveal panels 
-     */
-    public void EnablePanels(int currPage)
+    protected void Start()
     {
-        IsCleared = false;
-
-        switch (currPage)
-        {
-            case 1:
-                map.SetActive(true);
-                break;
-            case 2:
-                wendigo.SetActive(true);
-                break;
-            default:
-                break;
-        }
+        basecomponents = transform.Find("basecomponents").gameObject;
+        HideComponents();
     }
 
-    /* Called from BookController
-     *    
-     * BookController will be flipping left so hide everything
-     */
-    public void HidePanels(int currPage)
-    {
-        if (!mc.isActiveAndEnabled && !wc.isActiveAndEnabled)
-        {
-            IsCleared = true;
-        }
-        else
-        {
-            if (mc.isActiveAndEnabled)
-                mc.Hide(currPage + 1);
+    abstract public void OnPageFlip(int newCurrPage, string direction);
 
-            if (wc.isActiveAndEnabled)
-                wc.Hide(currPage + 1);
-        }
+    abstract public void OnButtonClick();
+
+    protected IEnumerator RevealComponents(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        MoveGameobjectToForeground();
+        basecomponents.SetActive(true);
     }
 
-    /*
-     * Called from MapController
-     * Called from WendigoController
-     * 
-     * Notification that they are disabled   
-     */
-    public void PanelHidden()
+    protected void HideComponents()
     {
-        IsCleared = true;
+        MoveGameobjectToBackground();
+        basecomponents.SetActive(false);
     }
 
-    private void Start()
+    protected void MoveGameobjectToForeground()
     {
-        bc = book.GetComponent<BookController>();
-        mc = map.GetComponent<MapController>();
-        wc = wendigo.GetComponent<MapController>();
+        transform.position = new Vector3(transform.position.x,
+                                         transform.position.y,
+                                         0);
     }
+
+    protected void MoveGameobjectToBackground()
+    {
+        transform.position = new Vector3(transform.position.x,
+                                         transform.position.y,
+                                         -10);
+    }
+
 }
