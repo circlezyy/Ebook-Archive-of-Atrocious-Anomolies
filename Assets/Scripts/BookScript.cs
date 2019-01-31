@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class BookScript : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class BookScript : MonoBehaviour
         keyboardInput = new UserKeyboardInput();
         touchInput = new UserIPadInput();
         inputStrategy = keyboardInput;
+
+        for (int i = 2; i < animator.Length - 1; i++)
+        {
+            animator[i].Play("Hide");
+        }
     }
 
     void Update()
@@ -48,9 +54,21 @@ public class BookScript : MonoBehaviour
         {
             currPage--;
             animator[currPage].Play("FlipRight");
-            if (PageFlipEvent != null)
-                PageFlipEvent(currPage, "right");
 
+            if (PageFlipEvent != null)
+            {
+                PageFlipEvent(currPage, "right");
+            }
+
+            if (currPage >= 1 && currPage <= animator.Length - 3)
+            {
+                StartCoroutine(HideOrRevealPage(currPage + 1, "Hide", 0.3f));
+            }
+
+            if (currPage >= 2 && currPage <= animator.Length - 2)
+            {
+                StartCoroutine(HideOrRevealPage(currPage - 1, "RevealLeft", 0.05f));
+            }
         }
     }
 
@@ -60,8 +78,27 @@ public class BookScript : MonoBehaviour
         {
             animator[currPage].Play("FlipLeft");
             currPage++;
+
             if (PageFlipEvent != null)
+            {
                 PageFlipEvent(currPage, "left");
+            }
+
+            if (currPage >= 3 && currPage <= animator.Length - 1)
+            {
+                StartCoroutine(HideOrRevealPage(currPage - 2, "Hide", 0.3f));
+            }
+
+            if (currPage >= 2 && currPage <= animator.Length - 2)
+            {
+                StartCoroutine(HideOrRevealPage(currPage, "RevealRight", 0.05f));
+            }
         }
+    }
+
+    IEnumerator HideOrRevealPage(int page, string animationName, float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        animator[page].Play(animationName);
     }
 }
