@@ -1,18 +1,24 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Wendigo_4_5 : CanvasController
 {
-    private GameObject Layer2_1_container;
-    private GameObject Layer2_2_container;
-    private GameObject Layer2_3_container;
+    private CanvasGroup canvasGroup;
+
+    public GameObject MushroomNote;
+    public GameObject HoofNote;
+    public GameObject SkullNote;
+
+    public GameObject Layer2_1_container;
+    public GameObject Layer2_2_container;
+    public GameObject Layer2_3_container;
 
     new public void Start()
     {
-        base.Start();
-        Layer2_1_container = transform.Find("Layer2_1_container").gameObject;
-        Layer2_2_container = transform.Find("Layer2_2_container").gameObject;
-        Layer2_3_container = transform.Find("Layer2_3_container").gameObject;
+        canvasGroup = GetComponent<CanvasGroup>();
+
+        StartCoroutine(DeactivateComponents(0.0f));
 
         FindObjectOfType<BookScript>().PageFlipEvent += OnPageFlip;
     }
@@ -21,13 +27,46 @@ public class Wendigo_4_5 : CanvasController
     {
         if (newCurrPage == 2)
         {
-            StartCoroutine(RevealComponents(TIME_DELAY_REVEAL_COMPONENTS));
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+            StartCoroutine(ActivateComponents(TIME_DELAY_REVEAL_COMPONENTS));
         }
         else
         {
-            StopAllCoroutines();
-            HideComponents();
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+            DisappearAnimations();
+            StartCoroutine(DeactivateComponents(TIME_DELAY_HIDE_COMPONENTS));
         }
+    }
+
+    IEnumerator ActivateComponents(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        MushroomNote.SetActive(true);
+        HoofNote.SetActive(true);
+        SkullNote.SetActive(true);
+
+        MushroomNote.GetComponent<Animator>().Play("Appear");
+        HoofNote.GetComponent<Animator>().Play("Appear");
+        SkullNote.GetComponent<Animator>().Play("Appear");
+    }
+
+    protected void DisappearAnimations()
+    {
+        MushroomNote.GetComponent<Animator>().Play("Disappear");
+        HoofNote.GetComponent<Animator>().Play("Disappear");
+        SkullNote.GetComponent<Animator>().Play("Disappear");
+    }
+
+    protected IEnumerator DeactivateComponents(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        MushroomNote.SetActive(false);
+        HoofNote.SetActive(false);
+        SkullNote.SetActive(false);
     }
 
     override public void OnButtonClick()

@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BookScript : MonoBehaviour
 {
-    private bool canInput;
-
+    private bool isAutoFlipping;
     private int currPage;
 
     private IUserInput keyboardInput;
     private IUserInput touchInput;
     private IUserInput inputStrategy;
+
+    private readonly float AUTO_FLIP_GAP = 0.2f;
 
     public delegate void PageEvent(int newCurrPage, string direction);
     public event PageEvent PageFlipEvent;
@@ -37,6 +39,9 @@ public class BookScript : MonoBehaviour
 
     private void GetInput()
     {
+        if (isAutoFlipping)
+            return;
+
         switch (inputStrategy.GetInput())
         {
             case "left":
@@ -47,6 +52,51 @@ public class BookScript : MonoBehaviour
                 break;
         }
     }
+
+    public void AutoFlip()
+    {
+        isAutoFlipping = true;
+
+        float autoFlipTime = 0;
+        int autoFlipCount = 0;
+
+        switch(EventSystem.current.currentSelectedGameObject.name)
+        {
+            case "button_wendigo":
+                autoFlipCount = 1;
+                break;
+            case "button_fresnowalker":
+                autoFlipCount = 2;
+                break;
+            case "button_jorogumo":
+                autoFlipCount = 3;
+                break;
+            case "button_leyak":
+                autoFlipCount = 4;
+                break;
+            case "button_lusca":
+                autoFlipCount = 5;
+                break;
+            case "button_nguruvilu":
+                autoFlipCount = 6;
+                break;
+            case "button_nightcrawler":
+                autoFlipCount = 7;
+                break;
+        }
+
+        for (int i = 0; i < autoFlipCount; i++)
+            Invoke("FlipLeft", autoFlipTime += AUTO_FLIP_GAP);
+
+        Invoke("TurnOffAutoFlipping", autoFlipTime);
+    }
+
+    public void TurnOffAutoFlipping()
+    {
+        isAutoFlipping = false;
+    }
+
+
 
     public void FlipRight()
     {
