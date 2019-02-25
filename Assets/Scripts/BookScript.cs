@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class BookScript : MonoBehaviour
 {
+    public Text dirText;
+    public Text dotText;
+    public Text dirMagnitudeText;
+
     private bool isAutoFlipping;
     private int currPage;
 
@@ -18,13 +23,17 @@ public class BookScript : MonoBehaviour
 
     public Animator[] animator;
 
+    public static BookScript Instance;
+    private bool isLayer2Active;
+
     void Start()
     {
+        Instance = this;
         Application.targetFrameRate = 60;
         currPage = 0;
         keyboardInput = new UserKeyboardInput();
-        touchInput = new UserIPadInput();
-        inputStrategy = keyboardInput;
+        touchInput = new UserIPadInput(dirText, dotText, dirMagnitudeText);
+        inputStrategy = touchInput;
 
         for (int i = 2; i < animator.Length - 1; i++)
         {
@@ -53,7 +62,7 @@ public class BookScript : MonoBehaviour
         }
     }
 
-    public void AutoFlip()
+    private void AutoFlip()
     {
         isAutoFlipping = true;
 
@@ -91,15 +100,16 @@ public class BookScript : MonoBehaviour
         Invoke("TurnOffAutoFlipping", autoFlipTime);
     }
 
-    public void TurnOffAutoFlipping()
+    private void TurnOffAutoFlipping()
     {
         isAutoFlipping = false;
     }
 
-
-
-    public void FlipRight()
+    private void FlipRight()
     {
+        if (isLayer2Active)
+            return;
+
         if (currPage > 0)
         {
             currPage--;
@@ -122,8 +132,11 @@ public class BookScript : MonoBehaviour
         }
     }
 
-    public void FlipLeft()
+    private void FlipLeft()
     {
+        if (isLayer2Active)
+            return;
+
         if (currPage < animator.Length)
         {
             animator[currPage].Play("FlipLeft");
@@ -146,9 +159,14 @@ public class BookScript : MonoBehaviour
         }
     }
 
-    IEnumerator HideOrRevealPage(int page, string animationName, float delayTime)
+    private IEnumerator HideOrRevealPage(int page, string animationName, float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
         animator[page].Play(animationName);
+    }
+
+    public void SetLayer2Active(bool value)
+    {
+        isLayer2Active = value;
     }
 }

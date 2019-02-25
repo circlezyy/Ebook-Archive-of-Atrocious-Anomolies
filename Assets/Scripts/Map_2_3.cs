@@ -2,18 +2,30 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Map_2_3 : CanvasController
+public class Map_2_3 : MonoBehaviour
 {
+    protected readonly float TIME_DELAY_REVEAL_COMPONENTS = 0.2f;
+    protected readonly float TIME_DELAY_HIDE_COMPONENTS = 0.2f;
+
     private CanvasGroup canvasGroup;
 
-    public GameObject nightcrawler;
-    public GameObject leyak;
-    public GameObject wendigo;
-    public GameObject jorogumo;
-    public GameObject lusca;
-    public GameObject nguruvilu;
+    public GameObject[] baseComponent;
 
-    new public void Start()
+    protected void MoveGameobjectToForeground()
+    {
+        transform.position = new Vector3(transform.position.x,
+                                         transform.position.y,
+                                         0);
+    }
+
+    protected void MoveGameobjectToBackground()
+    {
+        transform.position = new Vector3(transform.position.x,
+                                         transform.position.y,
+                                         -10);
+    }
+
+    public void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
 
@@ -22,7 +34,7 @@ public class Map_2_3 : CanvasController
         FindObjectOfType<BookScript>().PageFlipEvent += OnPageFlip;
     }
 
-    override public void OnPageFlip(int newCurrPage, string direction)
+    public void OnPageFlip(int newCurrPage, string direction)
     {
         if (newCurrPage == 1)
         {
@@ -43,45 +55,27 @@ public class Map_2_3 : CanvasController
     {
         yield return new WaitForSeconds(delayTime);
 
-        nightcrawler.SetActive(true);
-        leyak.SetActive(true);
-        wendigo.SetActive(true);
-        jorogumo.SetActive(true);
-        lusca.SetActive(true);
-        nguruvilu.SetActive(true);
-
-        nightcrawler.GetComponent<Animator>().Play("Appear");
-        leyak.GetComponent<Animator>().Play("Appear");
-        wendigo.GetComponent<Animator>().Play("Appear");
-        jorogumo.GetComponent<Animator>().Play("Appear");
-        lusca.GetComponent<Animator>().Play("Appear");
-        nguruvilu.GetComponent<Animator>().Play("Appear");
+        foreach (GameObject component in baseComponent)
+        {
+            component.SetActive(true);
+            component.GetComponent<Animator>().Play("Appear");
+        }
     }
 
     protected void DisappearAnimations()
     {
-        nightcrawler.GetComponent<Animator>().Play("Disappear");
-        leyak.GetComponent<Animator>().Play("Disappear");
-        wendigo.GetComponent<Animator>().Play("Disappear");
-        jorogumo.GetComponent<Animator>().Play("Disappear");
-        lusca.GetComponent<Animator>().Play("Disappear");
-        nguruvilu.GetComponent<Animator>().Play("Disappear");
+        foreach (GameObject component in baseComponent)
+        {
+            if (component.activeSelf)
+                component.GetComponent<Animator>().Play("Disappear");
+        }
     }
 
     protected IEnumerator DeactivateComponents(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
-        nightcrawler.SetActive(false);
-        leyak.SetActive(false);
-        wendigo.SetActive(false);
-        jorogumo.SetActive(false);
-        lusca.SetActive(false);
-        nguruvilu.SetActive(false);
-    }
-
-    override public void OnButtonClick()
-    {
-        //Debug.Log(EventSystem.current.currentSelectedGameObject.name);
+        foreach (GameObject component in baseComponent)
+            component.SetActive(false);
     }
 }

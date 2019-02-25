@@ -2,19 +2,17 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Wendigo_4_5 : CanvasController
+public class Wendigo_4_5 : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
 
-    public GameObject MushroomNote;
-    public GameObject HoofNote;
-    public GameObject SkullNote;
+    public GameObject[] baseComponents;
+    public GameObject[] layer2Components;
 
-    public GameObject Layer2_1_container;
-    public GameObject Layer2_2_container;
-    public GameObject Layer2_3_container;
+    protected readonly float TIME_DELAY_REVEAL_COMPONENTS = 0.2f;
+    protected readonly float TIME_DELAY_HIDE_COMPONENTS = 0.2f;
 
-    new public void Start()
+    public void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
 
@@ -23,7 +21,7 @@ public class Wendigo_4_5 : CanvasController
         FindObjectOfType<BookScript>().PageFlipEvent += OnPageFlip;
     }
 
-    override public void OnPageFlip(int newCurrPage, string direction)
+    public void OnPageFlip(int newCurrPage, string direction)
     {
         if (newCurrPage == 2)
         {
@@ -44,53 +42,47 @@ public class Wendigo_4_5 : CanvasController
     {
         yield return new WaitForSeconds(delayTime);
 
-        MushroomNote.SetActive(true);
-        HoofNote.SetActive(true);
-        SkullNote.SetActive(true);
-
-        MushroomNote.GetComponent<Animator>().Play("Appear");
-        HoofNote.GetComponent<Animator>().Play("Appear");
-        SkullNote.GetComponent<Animator>().Play("Appear");
+        foreach (GameObject component in baseComponents)
+        {
+            component.SetActive(true);
+            component.GetComponent<Animator>().Play("Appear");
+        }
     }
 
     protected void DisappearAnimations()
     {
-        MushroomNote.GetComponent<Animator>().Play("Disappear");
-        HoofNote.GetComponent<Animator>().Play("Disappear");
-        SkullNote.GetComponent<Animator>().Play("Disappear");
+        foreach (GameObject component in baseComponents)
+        {
+            if (component.activeSelf)
+                component.GetComponent<Animator>().Play("Disappear");
+
+        }
     }
 
     protected IEnumerator DeactivateComponents(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
-        MushroomNote.SetActive(false);
-        HoofNote.SetActive(false);
-        SkullNote.SetActive(false);
+        foreach (GameObject component in baseComponents)
+            component.SetActive(false);
     }
 
-    override public void OnButtonClick()
+    public void OnBaseButtonClick(string name)
     {
-        switch(EventSystem.current.currentSelectedGameObject.name)
+        foreach(GameObject layer2Component in layer2Components)
         {
-            case "button_Mushroomnote_wendigo":
-                Layer2_1_container.SetActive(true);
+            if (layer2Component.name == name)
+            {
+                layer2Component.SetActive(true);
+                BookScript.Instance.SetLayer2Active(true);
                 break;
-            case "button_Hoofnote_wendigo":
-                Layer2_2_container.SetActive(true);
-                break;
-            case "button_Skullnote_wendigo":
-                Layer2_3_container.SetActive(true);
-                break;
-            case "button_Layer2_1":
-                Layer2_1_container.SetActive(false);
-                break;
-            case "button_Layer2_2":
-                Layer2_2_container.SetActive(false);
-                break;
-            case "button_Layer2_3":
-                Layer2_3_container.SetActive(false);
-                break;
+            }
         }
+    }
+
+    public void OnLayer2ButtonClick()
+    {
+        EventSystem.current.currentSelectedGameObject.transform.parent.gameObject.SetActive(false);
+        BookScript.Instance.SetLayer2Active(false);
     }
 }
