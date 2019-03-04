@@ -54,7 +54,7 @@ public class Wendigo_4_5 : MonoBehaviour
         foreach (GameObject component in baseComponents)
         {
             if (component.activeSelf)
-                component.GetComponent<Animator>().Play("Disappear");
+                component.GetComponent<Animator>().Play("DisappearShrink");
 
         }
     }

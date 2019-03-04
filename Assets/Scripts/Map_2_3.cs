@@ -8,6 +8,7 @@ public class Map_2_3 : MonoBehaviour
     protected readonly float TIME_DELAY_HIDE_COMPONENTS = 0.2f;
 
     private CanvasGroup canvasGroup;
+    private string SelectedIcon;
 
     public GameObject[] baseComponent;
 
@@ -41,6 +42,7 @@ public class Map_2_3 : MonoBehaviour
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;
             StartCoroutine(ActivateComponents(TIME_DELAY_REVEAL_COMPONENTS));
+            SelectedIcon = "";
         }
         else
         {
@@ -67,7 +69,16 @@ public class Map_2_3 : MonoBehaviour
         foreach (GameObject component in baseComponent)
         {
             if (component.activeSelf)
-                component.GetComponent<Animator>().Play("Disappear");
+            {
+                if (SelectedIcon == component.name)
+                {
+                    component.GetComponent<Animator>().Play("DisappearGrow");
+                }
+                else
+                {
+                    component.GetComponent<Animator>().Play("DisappearShrink");
+                }
+            }
         }
     }
 
@@ -77,5 +88,11 @@ public class Map_2_3 : MonoBehaviour
 
         foreach (GameObject component in baseComponent)
             component.SetActive(false);
+    }
+
+    public void OnIconSelected()
+    {
+        SelectedIcon = EventSystem.current.currentSelectedGameObject.name;
+        Debug.Log(SelectedIcon);
     }
 }

@@ -17,6 +17,8 @@ public class BookScript : MonoBehaviour
     private IUserInput inputStrategy;
 
     private readonly float AUTO_FLIP_GAP = 0.2f;
+    private readonly float FLIP_LEFT_HIDE_DELAY = 0.3f;
+    private readonly float FLIP_RIGHT_HIDE_DELAY = 0.05f;
 
     public delegate void PageEvent(int newCurrPage, string direction);
     public event PageEvent PageFlipEvent;
@@ -62,7 +64,7 @@ public class BookScript : MonoBehaviour
         }
     }
 
-    private void AutoFlip()
+    public void AutoFlip()
     {
         isAutoFlipping = true;
 
@@ -122,12 +124,12 @@ public class BookScript : MonoBehaviour
 
             if (currPage >= 1 && currPage <= animator.Length - 3)
             {
-                StartCoroutine(HideOrRevealPage(currPage + 1, "Hide", 0.3f));
+                StartCoroutine(HideOrRevealPage(currPage + 1, "Hide", FLIP_LEFT_HIDE_DELAY));
             }
 
             if (currPage >= 2 && currPage <= animator.Length - 2)
             {
-                StartCoroutine(HideOrRevealPage(currPage - 1, "RevealLeft", 0.05f));
+                StartCoroutine(HideOrRevealPage(currPage - 1, "RevealLeft", FLIP_RIGHT_HIDE_DELAY));
             }
         }
     }
@@ -149,12 +151,12 @@ public class BookScript : MonoBehaviour
 
             if (currPage >= 3 && currPage <= animator.Length - 1)
             {
-                StartCoroutine(HideOrRevealPage(currPage - 2, "Hide", 0.3f));
+                StartCoroutine(HideOrRevealPage(currPage - 2, "Hide", FLIP_LEFT_HIDE_DELAY));
             }
 
             if (currPage >= 2 && currPage <= animator.Length - 2)
             {
-                StartCoroutine(HideOrRevealPage(currPage, "RevealRight", 0.05f));
+                StartCoroutine(HideOrRevealPage(currPage, "RevealRight", FLIP_RIGHT_HIDE_DELAY));
             }
         }
     }

@@ -3,8 +3,8 @@ using UnityEngine;
 
 public abstract class CanvasController: MonoBehaviour
 {
-    protected readonly float TIME_DELAY_REVEAL_COMPONENTS = 0.2f;
-    protected readonly float TIME_DELAY_HIDE_COMPONENTS = 0.2f;
+    protected readonly float TIME_DELAY_REVEAL_COMPONENTS = 0.0f;
+    protected readonly float TIME_DELAY_HIDE_COMPONENTS = 0.0f;
 
 
     protected void Start()
