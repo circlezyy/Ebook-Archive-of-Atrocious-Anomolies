@@ -29,9 +29,7 @@ public class Map_2_3 : MonoBehaviour
     public void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-
         StartCoroutine(DeactivateComponents(0.0f));
-
         FindObjectOfType<BookScript>().PageFlipEvent += OnPageFlip;
     }
 
@@ -92,7 +90,17 @@ public class Map_2_3 : MonoBehaviour
 
     public void OnIconSelected()
     {
-        SelectedIcon = EventSystem.current.currentSelectedGameObject.name;
-        Debug.Log(SelectedIcon);
+        if (SelectedIcon == "")
+        {
+            Debug.Log(EventSystem.current.currentSelectedGameObject.name);
+            EventSystem.current.currentSelectedGameObject.GetComponent<Animator>().Play("GrowHoldShrink");
+            SelectedIcon = EventSystem.current.currentSelectedGameObject.name;
+            Invoke("AutoFlip", 0.5f);
+        }
+    }
+
+    private void AutoFlip()
+    {
+        BookScript.Instance.AutoFlip();
     }
 }
