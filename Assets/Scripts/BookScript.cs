@@ -111,9 +111,11 @@ public class BookScript : MonoBehaviour
     {
         if (isLayer2Active)
             return;
-
+            
         if (currPage > 0)
         {
+            PlayRandomFlip();
+
             currPage--;
             animator[currPage].Play("FlipRight");
 
@@ -138,9 +140,11 @@ public class BookScript : MonoBehaviour
     {
         if (isLayer2Active)
             return;
-
+            
         if (currPage < animator.Length)
         {
+            PlayRandomFlip();
+
             animator[currPage].Play("FlipLeft");
             currPage++;
 
@@ -170,5 +174,13 @@ public class BookScript : MonoBehaviour
     public void SetLayer2Active(bool value)
     {
         isLayer2Active = value;
+    }
+
+    private void PlayRandomFlip()
+    {
+        var num = Random.Range(1, 4);
+        Debug.Log(num);
+
+        AudioManager.Instance.PlayOverlapping("flip" + num);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,7 +11,7 @@ public class Map_2_3 : MonoBehaviour
     private CanvasGroup canvasGroup;
     private string SelectedIcon;
 
-    public GameObject[] baseComponent;
+    public GameObject[] baseComponents;
 
     protected void MoveGameobjectToForeground()
     {
@@ -29,7 +30,7 @@ public class Map_2_3 : MonoBehaviour
     public void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-        StartCoroutine(DeactivateComponents(0.0f));
+        StartCoroutine(WaitAndDo(TIME_DELAY_HIDE_COMPONENTS, DeactivateComponents));
         FindObjectOfType<BookScript>().PageFlipEvent += OnPageFlip;
     }
 
@@ -39,7 +40,8 @@ public class Map_2_3 : MonoBehaviour
         {
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;
-            StartCoroutine(ActivateComponents(TIME_DELAY_REVEAL_COMPONENTS));
+            StartCoroutine(WaitAndDo(TIME_DELAY_REVEAL_COMPONENTS, ActivateComponents));
+
             SelectedIcon = "";
         }
         else
@@ -47,24 +49,14 @@ public class Map_2_3 : MonoBehaviour
             canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
             DisappearAnimations();
-            StartCoroutine(DeactivateComponents(TIME_DELAY_HIDE_COMPONENTS));
-        }
-    }
 
-    IEnumerator ActivateComponents(float delayTime)
-    {
-        yield return new WaitForSeconds(delayTime);
-
-        foreach (GameObject component in baseComponent)
-        {
-            component.SetActive(true);
-            component.GetComponent<Animator>().Play("Appear");
+            StartCoroutine(WaitAndDo(TIME_DELAY_HIDE_COMPONENTS, DeactivateComponents));
         }
     }
 
     protected void DisappearAnimations()
     {
-        foreach (GameObject component in baseComponent)
+        foreach (GameObject component in baseComponents)
         {
             if (component.activeSelf)
             {
@@ -80,11 +72,18 @@ public class Map_2_3 : MonoBehaviour
         }
     }
 
-    protected IEnumerator DeactivateComponents(float delayTime)
+    private void ActivateComponents()
     {
-        yield return new WaitForSeconds(delayTime);
+        foreach (GameObject component in baseComponents)
+        {
+            component.SetActive(true);
+            component.GetComponent<Animator>().Play("Appear");
+        }
+    }
 
-        foreach (GameObject component in baseComponent)
+    private void DeactivateComponents()
+    {
+        foreach (GameObject component in baseComponents)
             component.SetActive(false);
     }
 
@@ -95,12 +94,14 @@ public class Map_2_3 : MonoBehaviour
             Debug.Log(EventSystem.current.currentSelectedGameObject.name);
             EventSystem.current.currentSelectedGameObject.GetComponent<Animator>().Play("GrowHoldShrink");
             SelectedIcon = EventSystem.current.currentSelectedGameObject.name;
-            Invoke("AutoFlip", 0.5f);
+
+            StartCoroutine(WaitAndDo(0.5f, BookScript.Instance.AutoFlip));
         }
     }
 
-    private void AutoFlip()
+    IEnumerator WaitAndDo(float time, Action action)
     {
-        BookScript.Instance.AutoFlip();
+        yield return new WaitForSeconds(time);
+        action();
     }
 }

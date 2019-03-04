@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -16,7 +17,7 @@ public class Wendigo_4_5 : MonoBehaviour
     {
         canvasGroup = GetComponent<CanvasGroup>();
 
-        StartCoroutine(DeactivateComponents(0.0f));
+        StartCoroutine(WaitAndDo(TIME_DELAY_HIDE_COMPONENTS, DeactivateComponents));
 
         FindObjectOfType<BookScript>().PageFlipEvent += OnPageFlip;
     }
@@ -27,26 +28,30 @@ public class Wendigo_4_5 : MonoBehaviour
         {
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;
-            StartCoroutine(ActivateComponents(TIME_DELAY_REVEAL_COMPONENTS));
+            StartCoroutine(WaitAndDo(TIME_DELAY_REVEAL_COMPONENTS, ActivateComponents));
         }
         else
         {
             canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
             DisappearAnimations();
-            StartCoroutine(DeactivateComponents(TIME_DELAY_HIDE_COMPONENTS));
+            StartCoroutine(WaitAndDo(TIME_DELAY_HIDE_COMPONENTS, DeactivateComponents));
         }
     }
 
-    IEnumerator ActivateComponents(float delayTime)
+    private void ActivateComponents()
     {
-        yield return new WaitForSeconds(delayTime);
-
         foreach (GameObject component in baseComponents)
         {
             component.SetActive(true);
             component.GetComponent<Animator>().Play("Appear");
         }
+    }
+
+    private void DeactivateComponents()
+    {
+        foreach (GameObject component in baseComponents)
+            component.SetActive(false);
     }
 
     protected void DisappearAnimations()
@@ -59,13 +64,7 @@ public class Wendigo_4_5 : MonoBehaviour
         }
     }
 
-    protected IEnumerator DeactivateComponents(float delayTime)
-    {
-        yield return new WaitForSeconds(delayTime);
 
-        foreach (GameObject component in baseComponents)
-            component.SetActive(false);
-    }
 
     public void OnBaseButtonClick(string name)
     {
@@ -84,5 +83,11 @@ public class Wendigo_4_5 : MonoBehaviour
     {
         EventSystem.current.currentSelectedGameObject.transform.parent.gameObject.SetActive(false);
         BookScript.Instance.SetLayer2Active(false);
+    }
+
+    IEnumerator WaitAndDo(float time, Action action)
+    {
+        yield return new WaitForSeconds(time);
+        action();
     }
 }
