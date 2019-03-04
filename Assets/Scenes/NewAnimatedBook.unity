@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 38628704}
   - component: {fileID: 38628703}
   - component: {fileID: 38628702}
+  - component: {fileID: 38628701}
   m_Layer: 9
   m_Name: button_jorogumo
   m_TagString: Untagged
@@ -188,6 +189,18 @@ RectTransform:
   m_AnchoredPosition: {x: 4.1, y: 5.78}
   m_SizeDelta: {x: 1.31, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &38628701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38628699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c778faf2df442639553cf644e62652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &38628702
 Animator:
   serializedVersion: 3
@@ -857,6 +870,7 @@ GameObject:
   - component: {fileID: 236237224}
   - component: {fileID: 236237223}
   - component: {fileID: 236237222}
+  - component: {fileID: 236237221}
   m_Layer: 9
   m_Name: button_leyak
   m_TagString: Untagged
@@ -884,6 +898,18 @@ RectTransform:
   m_AnchoredPosition: {x: 2.52, y: 4.71}
   m_SizeDelta: {x: 2.3, y: 2.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &236237221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236237219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c778faf2df442639553cf644e62652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &236237222
 Animator:
   serializedVersion: 3
@@ -5050,6 +5076,7 @@ GameObject:
   - component: {fileID: 1361565417}
   - component: {fileID: 1361565416}
   - component: {fileID: 1361565415}
+  - component: {fileID: 1361565414}
   m_Layer: 9
   m_Name: button_wendigo
   m_TagString: Untagged
@@ -5077,6 +5104,18 @@ RectTransform:
   m_AnchoredPosition: {x: -2.94, y: 6.28}
   m_SizeDelta: {x: 1.7, y: 2.1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1361565414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361565412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c778faf2df442639553cf644e62652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1361565415
 Animator:
   serializedVersion: 3
@@ -5921,6 +5960,7 @@ GameObject:
   - component: {fileID: 1636156316}
   - component: {fileID: 1636156315}
   - component: {fileID: 1636156314}
+  - component: {fileID: 1636156313}
   m_Layer: 9
   m_Name: button_nightcrawler
   m_TagString: Untagged
@@ -5948,6 +5988,18 @@ RectTransform:
   m_AnchoredPosition: {x: -4.07, y: 5.82}
   m_SizeDelta: {x: 2.2, y: 2.1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1636156313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636156311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c778faf2df442639553cf644e62652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1636156314
 Animator:
   serializedVersion: 3
@@ -6674,6 +6726,7 @@ GameObject:
   - component: {fileID: 1805291446}
   - component: {fileID: 1805291445}
   - component: {fileID: 1805291444}
+  - component: {fileID: 1805291443}
   m_Layer: 9
   m_Name: button_lusca
   m_TagString: Untagged
@@ -6701,6 +6754,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0.30823112, y: 5.482184}
   m_SizeDelta: {x: 1.5, y: 2.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1805291443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805291441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c778faf2df442639553cf644e62652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1805291444
 Animator:
   serializedVersion: 3
@@ -7067,6 +7132,7 @@ GameObject:
   - component: {fileID: 1935097761}
   - component: {fileID: 1935097760}
   - component: {fileID: 1935097759}
+  - component: {fileID: 1935097758}
   m_Layer: 9
   m_Name: button_nguruvilu
   m_TagString: Untagged
@@ -7094,6 +7160,18 @@ RectTransform:
   m_AnchoredPosition: {x: -1.9, y: 3.51}
   m_SizeDelta: {x: 2.2, y: 2.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1935097758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935097756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c778faf2df442639553cf644e62652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1935097759
 Animator:
   serializedVersion: 3
