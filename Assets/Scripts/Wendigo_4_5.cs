@@ -44,7 +44,8 @@ public class Wendigo_4_5 : MonoBehaviour
         foreach (GameObject component in baseComponents)
         {
             component.SetActive(true);
-            component.GetComponent<Animator>().Play("Appear");
+            if (component.GetComponent<Animator>() != null)
+                component.GetComponent<Animator>().Play("Appear");
         }
     }
 
@@ -59,18 +60,19 @@ public class Wendigo_4_5 : MonoBehaviour
         foreach (GameObject component in baseComponents)
         {
             if (component.activeSelf)
-                component.GetComponent<Animator>().Play("DisappearShrink");
+                if (component.GetComponent<Animator>() != null)
+                    component.GetComponent<Animator>().Play("DisappearShrink");
 
         }
     }
 
-
-
-    public void OnBaseButtonClick(string name)
+    public void OnBaseButtonClick()
     {
+        string buttonName = EventSystem.current.currentSelectedGameObject.name;
+
         foreach(GameObject layer2Component in layer2Components)
         {
-            if (layer2Component.name == name)
+            if (layer2Component.name == buttonName)
             {
                 layer2Component.SetActive(true);
                 BookScript.Instance.SetLayer2Active(true);
