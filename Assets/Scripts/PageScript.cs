@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Wendigo : CanvasController
+public class PageScript : CanvasController
 {
     new public void Start()
     {

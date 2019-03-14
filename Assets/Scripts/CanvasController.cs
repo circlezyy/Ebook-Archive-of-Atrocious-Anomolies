@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,13 +11,25 @@ public abstract class CanvasController: MonoBehaviour
     protected readonly float TIME_DELAY_REVEAL_COMPONENTS = 0.2f;
     protected readonly float TIME_DELAY_HIDE_COMPONENTS = 0.2f;
 
-    public GameObject[] baseComponents;
-    public GameObject[] layer2Components;
+    public GameObject baseComponentHolder;
+    public GameObject layer2ComponentHolder;
 
-    protected int pageNum;
+    protected List<GameObject> baseComponents;
+    protected List<GameObject> layer2Components;
+
+    public int pageNum;
 
     public void Start()
     {
+        baseComponents = new List<GameObject>();
+        layer2Components = new List<GameObject>();
+
+        foreach (Transform child in baseComponentHolder.transform)
+            baseComponents.Add(child.gameObject);
+
+        foreach (Transform child in layer2ComponentHolder.transform)
+            layer2Components.Add(child.gameObject);
+
         canvasGroup = GetComponent<CanvasGroup>();
         StartCoroutine(WaitAndDo(TIME_DELAY_HIDE_COMPONENTS, DeactivateComponents));
         FindObjectOfType<BookScript>().PageFlipEvent += OnPageFlip;
@@ -63,9 +76,10 @@ public abstract class CanvasController: MonoBehaviour
         action();
     }
 
-    protected void OnBaseButtonClick()
+    public void OnBaseButtonClick()
     {
         string buttonName = EventSystem.current.currentSelectedGameObject.name;
+        Debug.Log(buttonName);
 
         foreach (GameObject layer2Component in layer2Components)
         {
@@ -78,7 +92,7 @@ public abstract class CanvasController: MonoBehaviour
         }
     }
 
-    protected void OnLayer2ButtonClick()
+    public void OnLayer2ButtonClick()
     {
         EventSystem.current.currentSelectedGameObject.transform.parent.gameObject.SetActive(false);
         BookScript.Instance.SetLayer2Active(false);

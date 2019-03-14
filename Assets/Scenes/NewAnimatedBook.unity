@@ -1102,8 +1102,8 @@ GameObject:
   - component: {fileID: 179546663}
   - component: {fileID: 179546666}
   - component: {fileID: 179546665}
-  - component: {fileID: 179546667}
   - component: {fileID: 179546664}
+  - component: {fileID: 179546667}
   m_Layer: 9
   m_Name: Wendigo
   m_TagString: Untagged
@@ -1190,23 +1190,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 179546662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d23466f77000b46d39b5caa7adc9cffa, type: 3}
+  m_Script: {fileID: 11500000, guid: 22e8614f460e94358ae00897f1839dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseComponents:
-  - {fileID: 1453320756}
-  - {fileID: 669845703}
-  - {fileID: 855280788}
-  - {fileID: 555822094}
-  - {fileID: 1306867716}
-  - {fileID: 714123992}
-  layer2Components:
-  - {fileID: 1262819338}
-  - {fileID: 1047152943}
-  - {fileID: 931201645}
-  - {fileID: 1429907173}
-  - {fileID: 2057888145}
-  - {fileID: 1453322847}
+  baseComponentHolder: {fileID: 1463203951}
+  layer2ComponentHolder: {fileID: 1641021333}
+  pageNum: 2
 --- !u!1 &224582413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,14 +2459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca7b7be7d9234a94a8c428f61ff88ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseComponents:
-  - {fileID: 1636156311}
-  - {fileID: 236237219}
-  - {fileID: 1361565412}
-  - {fileID: 38628699}
-  - {fileID: 1805291441}
-  - {fileID: 1935097756}
-  layer2Components: []
+  baseComponentHolder: {fileID: 417603141}
+  layer2ComponentHolder: {fileID: 417603141}
+  pageNum: 1
 --- !u!1 &448404286
 GameObject:
   m_ObjectHideFlags: 0
@@ -10646,8 +10630,8 @@ GameObject:
   - component: {fileID: 2006749971}
   - component: {fileID: 2006749975}
   - component: {fileID: 2006749974}
-  - component: {fileID: 2006749972}
   - component: {fileID: 2006749973}
+  - component: {fileID: 2006749972}
   m_Layer: 9
   m_Name: FresnoWalker
   m_TagString: Untagged
@@ -10685,23 +10669,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2006749970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c109d3f734281471c8811e45c7f67bdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 22e8614f460e94358ae00897f1839dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseComponents:
-  - {fileID: 690587578}
-  - {fileID: 537505031}
-  - {fileID: 1528338882}
-  - {fileID: 529236352}
-  - {fileID: 1940736724}
-  - {fileID: 1847647566}
-  layer2Components:
-  - {fileID: 1892686545}
-  - {fileID: 531548401}
-  - {fileID: 1744451884}
-  - {fileID: 556232116}
-  - {fileID: 730818827}
-  - {fileID: 1247632327}
+  baseComponentHolder: {fileID: 279273517}
+  layer2ComponentHolder: {fileID: 858547115}
+  pageNum: 3
 --- !u!225 &2006749973
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10710,7 +10683,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006749970}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

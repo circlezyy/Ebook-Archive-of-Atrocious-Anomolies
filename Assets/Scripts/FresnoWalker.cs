@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 
 public class FresnoWalker : CanvasController
-{ 
-
+{
     new public void Start()
     {
         base.Start();
-        pageNum = 3;
     }
 
     override protected void DisappearAnimations()
