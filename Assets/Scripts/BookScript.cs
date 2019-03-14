@@ -179,8 +179,6 @@ public class BookScript : MonoBehaviour
     private void PlayRandomFlip()
     {
         var num = Random.Range(1, 4);
-        Debug.Log(num);
-
         AudioManager.Instance.PlayOverlapping("flip" + num);
     }
 }
