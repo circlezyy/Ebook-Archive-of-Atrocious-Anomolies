@@ -76,7 +76,7 @@ public abstract class CanvasController: MonoBehaviour
         action();
     }
 
-    public void OnBaseButtonClick()
+    virtual public void OnBaseButtonClick()
     {
         string buttonName = EventSystem.current.currentSelectedGameObject.name;
         Debug.Log(buttonName);
@@ -92,7 +92,7 @@ public abstract class CanvasController: MonoBehaviour
         }
     }
 
-    public void OnLayer2ButtonClick()
+    virtual public void OnLayer2ButtonClick()
     {
         EventSystem.current.currentSelectedGameObject.transform.parent.gameObject.SetActive(false);
         BookScript.Instance.SetLayer2Active(false);

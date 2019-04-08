@@ -3,6 +3,8 @@ using UnityEngine.EventSystems;
 
 public class PageScript : CanvasController
 {
+    public GameObject[] sparkles;
+
     new public void Start()
     {
         base.Start();
@@ -17,5 +19,19 @@ public class PageScript : CanvasController
                     component.GetComponent<Animator>().Play("DisappearShrink");
 
         }
+    }
+
+    override public void OnBaseButtonClick()
+    {
+        base.OnBaseButtonClick();
+        foreach (GameObject sparkle in sparkles)
+            sparkle.SetActive(false);
+    }
+
+    override public void OnLayer2ButtonClick()
+    {
+        base.OnLayer2ButtonClick();
+        foreach (GameObject sparkle in sparkles)
+            sparkle.SetActive(true);
     }
 }
