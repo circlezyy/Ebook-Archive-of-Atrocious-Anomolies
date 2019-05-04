@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BookScript : MonoBehaviour
 {
+    public GameObject TableDarkFilter;
+
     public Text dirText;
     public Text dotText;
     public Text dirMagnitudeText;
@@ -27,6 +29,9 @@ public class BookScript : MonoBehaviour
 
     public static BookScript Instance;
     private bool isLayer2Active;
+    private bool isFlippingLeft;
+    private bool isFlippingRight;
+
 
     void Start()
     {
@@ -35,7 +40,7 @@ public class BookScript : MonoBehaviour
         currPage = 0;
         keyboardInput = new UserKeyboardInput();
         touchInput = new UserIPadInput(dirText, dotText, dirMagnitudeText);
-        inputStrategy = touchInput;
+        inputStrategy = keyboardInput;
 
         for (int i = 2; i < animator.Length - 1; i++)
         {
@@ -111,12 +116,16 @@ public class BookScript : MonoBehaviour
     {
         if (isLayer2Active)
             return;
-            
+                        
         if (currPage > 0)
         {
             PlayRandomFlip();
 
             currPage--;
+
+            if (currPage == 0)
+                TableDarkFilter.SetActive(false);
+
             animator[currPage].Play("FlipRight");
 
             if (PageFlipEvent != null)
@@ -138,10 +147,12 @@ public class BookScript : MonoBehaviour
 
     private void FlipLeft()
     {
+        TableDarkFilter.SetActive(true);
+
         if (isLayer2Active)
             return;
             
-        if (currPage < animator.Length)
+        if (currPage < 7)
         {
             PlayRandomFlip();
 

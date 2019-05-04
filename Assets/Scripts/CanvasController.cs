@@ -6,15 +6,20 @@ using UnityEngine.EventSystems;
 
 public abstract class CanvasController: MonoBehaviour
 {
+    public GameObject Darken;
     protected CanvasGroup canvasGroup;
 
     protected readonly float TIME_DELAY_REVEAL_COMPONENTS = 0.2f;
     protected readonly float TIME_DELAY_HIDE_COMPONENTS = 0.2f;
+    protected readonly float TIME_DELAY_HIDE_COMPONENTS_FAST = 0f;
 
     public GameObject baseComponentHolder;
+    public GameObject baseComponentFastHolder;
     public GameObject layer2ComponentHolder;
 
+
     protected List<GameObject> baseComponents;
+    protected List<GameObject> baseComponentsFast;
     protected List<GameObject> layer2Components;
 
     public int pageNum;
@@ -23,9 +28,13 @@ public abstract class CanvasController: MonoBehaviour
     {
         baseComponents = new List<GameObject>();
         layer2Components = new List<GameObject>();
+        baseComponentsFast = new List<GameObject>();
 
         foreach (Transform child in baseComponentHolder.transform)
             baseComponents.Add(child.gameObject);
+
+        foreach (Transform child in baseComponentFastHolder.transform)
+            baseComponentsFast.Add(child.gameObject);
 
         foreach (Transform child in layer2ComponentHolder.transform)
             layer2Components.Add(child.gameObject);
@@ -48,6 +57,7 @@ public abstract class CanvasController: MonoBehaviour
             canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
             DisappearAnimations();
+            StartCoroutine(WaitAndDo(TIME_DELAY_HIDE_COMPONENTS_FAST, DeactivateComponentsFast));
             StartCoroutine(WaitAndDo(TIME_DELAY_HIDE_COMPONENTS, DeactivateComponents));
         }
     }
@@ -62,6 +72,17 @@ public abstract class CanvasController: MonoBehaviour
             if (component.GetComponent<Animator>() != null)
                 component.GetComponent<Animator>().Play("Appear");
         }
+
+        foreach (GameObject component in baseComponentsFast)
+        {
+            component.SetActive(true);
+        }
+    }
+
+    protected void DeactivateComponentsFast()
+    {
+        foreach (GameObject component in baseComponentsFast)
+            component.SetActive(false);
     }
 
     protected void DeactivateComponents()
@@ -79,7 +100,8 @@ public abstract class CanvasController: MonoBehaviour
     virtual public void OnBaseButtonClick()
     {
         string buttonName = EventSystem.current.currentSelectedGameObject.name;
-        Debug.Log(buttonName);
+        if (Darken != null)
+            Darken.SetActive(true);
 
         foreach (GameObject layer2Component in layer2Components)
         {
@@ -94,6 +116,8 @@ public abstract class CanvasController: MonoBehaviour
 
     virtual public void OnLayer2ButtonClick()
     {
+        if (Darken != null)
+            Darken.SetActive(false);
         EventSystem.current.currentSelectedGameObject.transform.parent.gameObject.SetActive(false);
         BookScript.Instance.SetLayer2Active(false);
     }
