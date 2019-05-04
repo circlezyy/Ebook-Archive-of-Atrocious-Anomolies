@@ -1,5 +1,4 @@
-﻿using UnityEngine.Audio;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
@@ -8,8 +7,27 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance { get { return instance; } }
 
     public Sound[] sounds;
+    private List<AudioSource> sfxSources;
+    private List<AudioSource> musicSources;
 
     private Dictionary<string, Sound> soundsDict;
+
+    public void ChangeSFXVolume(float value)
+    {
+        foreach (AudioSource a in sfxSources)
+        {
+            Debug.Log("here");
+            a.volume = value;
+        }
+    }
+
+    public void ChangeMusicVolume(float value)
+    {
+        foreach (AudioSource a in musicSources)
+        {
+            a.volume = value;
+        }
+    }
 
     private void Awake()
     {
@@ -21,6 +39,8 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         soundsDict = new Dictionary<string, Sound>();
+        sfxSources = new List<AudioSource>();
+        musicSources = new List<AudioSource>();
 
         foreach (Sound s in sounds)
         {
@@ -30,6 +50,13 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
             soundsDict.Add(s.name, s);
+
+            if (s.type == "sfx")
+                sfxSources.Add(s.source);
+
+            if (s.type == "music")
+                musicSources.Add(s.source);
+
         }
     }
 
