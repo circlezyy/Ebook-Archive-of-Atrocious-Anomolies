@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public abstract class CanvasController: MonoBehaviour
 {
     public GameObject Darken;
+    public GameObject JurogumoTransform;
     protected CanvasGroup canvasGroup;
 
     protected readonly float TIME_DELAY_REVEAL_COMPONENTS = 0.2f;
@@ -112,6 +113,12 @@ public abstract class CanvasController: MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void OnJorogumoButtonClicked()
+    {
+        string buttonName = EventSystem.current.currentSelectedGameObject.name;
+        JurogumoTransform.SetActive(true);
     }
 
     virtual public void OnLayer2ButtonClick()

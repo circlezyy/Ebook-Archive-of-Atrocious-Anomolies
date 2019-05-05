@@ -2,10 +2,16 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class BookScript : MonoBehaviour
 {
+    public GameObject JurogumoTransform;
+    public VideoPlayer JurogumoVideo;
+    public VideoClip human;
     public GameObject TableDarkFilter;
+    public GameObject CreditsButton;
+    public GameObject ShowCreditsButton;
 
     public Text dirText;
     public Text dotText;
@@ -121,6 +127,9 @@ public class BookScript : MonoBehaviour
 
     private void FlipRight()
     {
+        JurogumoTransform.SetActive(false);
+        JurogumoVideo.clip = human;
+
         if (isLayer2Active)
             return;
                         
@@ -131,7 +140,10 @@ public class BookScript : MonoBehaviour
             currPage--;
 
             if (currPage == 0)
+            {
                 TableDarkFilter.SetActive(false);
+                ShowCreditsButton.SetActive(true);
+            }
 
             animator[currPage].Play("FlipRight");
 
@@ -154,6 +166,11 @@ public class BookScript : MonoBehaviour
 
     private void FlipLeft()
     {
+        ShowCreditsButton.SetActive(false);
+        CreditsButton.SetActive(false);
+        JurogumoTransform.SetActive(false);
+        JurogumoVideo.clip = human;
+
         TableDarkFilter.SetActive(true);
 
         if (isLayer2Active)
@@ -161,6 +178,8 @@ public class BookScript : MonoBehaviour
             
         if (currPage < 7)
         {
+
+
             PlayRandomFlip();
 
             animator[currPage].Play("FlipLeft");
