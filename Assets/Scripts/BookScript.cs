@@ -37,6 +37,8 @@ public class BookScript : MonoBehaviour
     {
         Instance = this;
         Application.targetFrameRate = 60;
+        AudioManager.Instance.Play("intro");
+        Invoke("PlayLoopDelayed", 55.385f);
         currPage = 0;
         keyboardInput = new UserKeyboardInput();
         touchInput = new UserIPadInput(dirText, dotText, dirMagnitudeText);
@@ -46,6 +48,11 @@ public class BookScript : MonoBehaviour
         {
             animator[i].Play("Hide");
         }
+    }
+
+    void PlayLoopDelayed()
+    {
+        AudioManager.Instance.Play("loop");
     }
 
     void Update()
