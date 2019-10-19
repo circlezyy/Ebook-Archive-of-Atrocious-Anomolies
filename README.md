@@ -5,9 +5,9 @@ The book featured animated page flipping, embedded movies, interactive animation
 
 https://www.youtube.com/watch?v=6ziZHkhu6X4
 
-Director - Jay Chavez
-Programmer - David Montes
-Artists - Paulina Nguyen, Tina Le, Jessica Topacio
-Animator - Julie Huang
-Writer - Eilene Lueck
-Composer - Brandon Pieterouiski
+Director - Jay Chavez\
+Programmer - David Montes\
+Artists - Paulina Nguyen, Tina Le, Jessica Topacio\
+Animator - Julie Huang\
+Writer - Eilene Lueck\
+Composer - Brandon Pieterouiski\
